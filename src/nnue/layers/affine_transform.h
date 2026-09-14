@@ -353,11 +353,23 @@ class AffineTransform {
             vec_t               sum0      = vec_setzero();
             const auto          row0      = reinterpret_cast<const vec_t*>(&weights[0]);
 
-            for (int j = 0; j < int(NumChunks); ++j)
+            int j = 0;
+    #if defined(USE_VNNI) || defined(USE_NEON_DOTPROD)
+            // Shorten the final layer's dot-product dependency chain.
+            vec_t sum1 = vec_setzero();
+            for (; j + 1 < int(NumChunks); j += 2)
             {
-                const vec_t in = inputVector[j];
-                vec_add_dpbusd_32(sum0, in, row0[j]);
+                vec_add_dpbusd_32(sum0, inputVector[j], row0[j]);
+                vec_add_dpbusd_32(sum1, inputVector[j + 1], row0[j + 1]);
             }
+        #if defined(USE_NEON_DOTPROD)
+            sum0 = vaddq_s32(sum0, sum1);
+        #else
+            sum0 = _mm256_add_epi32(sum0, sum1);
+        #endif
+    #endif
+            for (; j < int(NumChunks); ++j)
+                vec_add_dpbusd_32(sum0, inputVector[j], row0[j]);
             output[0] = vec_hadd(sum0, biases[0]);
 
     #undef vec_setzero
