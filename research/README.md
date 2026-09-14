@@ -4,7 +4,7 @@ Personal fork: [arcrystal/Stockfish](https://github.com/arcrystal/Stockfish). St
 
 **No Elo improvement is established yet.** The strongest initial hypothesis suppresses negative correction-history learning from a search that excludes the presumed best move. Its small local screen was inconclusive. The isolated patch is approved and running in [Fishtest](https://tests.stockfishchess.org/tests/view/6aa85960cb562be55c88e907), using standard STC and the personal fork. The [experiment ledger](EXPERIMENTS.md) is authoritative for current test status, exact settings, and results.
 
-The strongest reproduced behavioral finding is the omission of an available quiet repetition draw at the quiescence horizon. Its isolated patch passes the targeted history/no-history probe and is submitted as a [second Fishtest trial](https://tests.stockfishchess.org/tests/view/6aa85fe9cb562be55c88e90e), currently awaiting approval. Both trials must finish before drawing a strength conclusion.
+The strongest reproduced behavioral finding is the omission of an available quiet repetition draw at the quiescence horizon. Its isolated patch passes the targeted history/no-history probe and is approved and running as a [second Fishtest trial](https://tests.stockfishchess.org/tests/view/6aa85fe9cb562be55c88e90e). Both trials remain unfinished as of 14 September 2026 at 23:39 UTC; neither has established a strength improvement.
 
 ## What was researched
 
@@ -33,7 +33,7 @@ The ranking reflects mechanisms and testing cost, not measured Elo. Related hist
 | [codex/tt-bound](https://github.com/arcrystal/Stockfish/tree/codex/tt-bound) | `144dff77` | 1485122 | Local 1,000 games: −1.04 ±11.21 Elo, inconclusive |
 | [codex/queen-escape](https://github.com/arcrystal/Stockfish/tree/codex/queen-escape) | `442230b9` | 1281886 | Local 1,000 games: +1.74 ±11.70 Elo, inconclusive |
 | [codex/nnue-chains](https://github.com/arcrystal/Stockfish/tree/codex/nnue-chains) | `4d8dd713` | 1648567 | Exact outputs; speedup −1.15%, interval [−2.35%, +0.06%]; set aside |
-| [codex/repetition-floor](https://github.com/arcrystal/Stockfish/tree/codex/repetition-floor) | `948232b7` | 1586754 | Local 1,000 games: +3.13 ±11.93 Elo, inconclusive; Fishtest submitted |
+| [codex/repetition-floor](https://github.com/arcrystal/Stockfish/tree/codex/repetition-floor) | `948232b7` | 1586754 | Local 1,000 games: +3.13 ±11.93 Elo, inconclusive; Fishtest running |
 
 Each of these five candidates passes the existing 75 functional tests and 20 reproducibility cases. The baseline also passes the signature and all 20 normal/Chess960 perft cases. Numerical and functional checks establish different things from game strength. None of the candidate changes has been combined with another.
 
