@@ -1,0 +1,27 @@
+Indexing opening suite...
+Started game 1 of 8 (baseline-a vs baseline-b)
+Started game 2 of 8 (baseline-b vs baseline-a)
+Finished game 2 (baseline-b vs baseline-a): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 3 of 8 (baseline-a vs baseline-b)
+Finished game 1 (baseline-a vs baseline-b): 1-0 {White wins by adjudication}
+Started game 4 of 8 (baseline-b vs baseline-a)
+Finished game 3 (baseline-a vs baseline-b): 0-1 {Black wins by adjudication}
+Started game 5 of 8 (baseline-a vs baseline-b)
+Finished game 4 (baseline-b vs baseline-a): 1/2-1/2 {Draw by adjudication}
+Started game 6 of 8 (baseline-b vs baseline-a)
+Finished game 6 (baseline-b vs baseline-a): 1/2-1/2 {Draw by adjudication}
+Started game 7 of 8 (baseline-a vs baseline-b)
+Finished game 5 (baseline-a vs baseline-b): 1-0 {White wins by adjudication}
+Started game 8 of 8 (baseline-b vs baseline-a)
+Finished game 8 (baseline-b vs baseline-a): 1/2-1/2 {Draw by adjudication}
+Finished game 7 (baseline-a vs baseline-b): 1-0 {White wins by adjudication}
+--------------------------------------------------
+Results of baseline-a vs baseline-b (1+0.01, 1t, 16MB, UHO_Lichess_4852_v1.epd):
+Elo: 88.74 +/- 172.82, nElo: 141.84 +/- 240.76
+LOS: 87.59 %, DrawRatio: 0.00 %, PairsRatio: 3.00
+Games: 8, Wins: 3, Losses: 1, Draws: 4, Points: 5.0 (62.50 %)
+Ptnml(0-2): [0, 1, 0, 3, 0], WL/DD Ratio: nan
+--------------------------------------------------
+Finished match
+Total Time: 00:00:13 (hours:minutes:seconds)
+

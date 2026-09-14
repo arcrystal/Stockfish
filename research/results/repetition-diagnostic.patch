@@ -1,0 +1,87 @@
+diff --git a/src/search.cpp b/src/search.cpp
+index 842fd157..dcdea56c 100644
+--- a/src/search.cpp
++++ b/src/search.cpp
+@@ -132,6 +132,19 @@ void update_correction_history(const Position& pos,
+ 
+ // Add a small random component to draw evaluations to avoid 3-fold blindness
+ Value value_draw(usize nodes) { return VALUE_DRAW - 1 + Value(nodes & 0x2); }
++
++// Diagnostic only: observations do not change search values or TT admission.
++struct RepetitionDiagnostic {
++    std::atomic<u64> detected{0}, continued{0}, ttBelow{0}, finalBelow{0}, samples{0};
++    ~RepetitionDiagnostic() {
++        std::cerr << "QREP_TOTAL detected=" << detected.load()
++                  << " continued=" << continued.load()
++                  << " tt_below=" << ttBelow.load()
++                  << " final_below=" << finalBelow.load()
++                  << " logged=" << std::min(u64(64), samples.load()) << '\n';
++    }
++} repetitionDiagnostic;
++
+ Value value_to_tt(Value v, int ply);
+ Value value_from_tt(Value v, int ply, int r50c);
+ void  update_continuation_histories(Stack* ss, Piece pc, Square to, int bonus);
+@@ -1673,14 +1686,42 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
+     assert(alpha >= -VALUE_INFINITE && alpha < beta && beta <= VALUE_INFINITE);
+     assert(PvNode || (alpha == beta - 1));
+ 
++    const Value diagnosticInputAlpha = alpha;
++    const Value diagnosticInputBeta  = beta;
++    Value diagnosticRepetitionValue = -VALUE_INFINITE;
++
+     // Check if we have an upcoming move that draws by repetition
+     if (alpha < VALUE_DRAW && pos.upcoming_repetition(ss->ply))
+     {
+         alpha = value_draw(nodes);
++        diagnosticRepetitionValue = alpha;
++        repetitionDiagnostic.detected.fetch_add(1, std::memory_order_relaxed);
+         if (alpha >= beta)
+             return alpha;
++        repetitionDiagnostic.continued.fetch_add(1, std::memory_order_relaxed);
+     }
+ 
++    auto diagnosticReturn = [&](Value returned, bool ttReturn) {
++        if (returned >= diagnosticRepetitionValue)
++            return;
++        auto& counter = ttReturn ? repetitionDiagnostic.ttBelow : repetitionDiagnostic.finalBelow;
++        counter.fetch_add(1, std::memory_order_relaxed);
++        if (repetitionDiagnostic.samples.fetch_add(1, std::memory_order_relaxed) < 64)
++        {
++            std::cerr << "QREP_EVENT route=" << (ttReturn ? "tt" : "final")
++                      << " pv=" << PvNode << " check=" << bool(pos.checkers())
++                      << " ply=" << ss->ply << " pieces=" << pos.count<ALL_PIECES>()
++                      << " rule50=" << pos.rule50_count()
++                      << " alpha_in=" << diagnosticInputAlpha << " beta_in=" << diagnosticInputBeta
++                      << " alpha_now=" << alpha << " returned=" << returned
++                      << " floor=" << diagnosticRepetitionValue << " fen=\"" << pos.fen()
++                      << "\" path=\"";
++            for (int i = ss->ply; i > 0; --i)
++                std::cerr << UCIEngine::move((ss-i)->currentMove, pos.is_chess960()) << ' ';
++            std::cerr << "\"\n";
++        }
++    };
++
+     PVMoves   pv;
+     StateInfo st;
+ 
+@@ -1723,7 +1764,10 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
+     // At non-PV nodes we check for an early TT cutoff
+     if (!PvNode && ttData.depth >= DEPTH_QS && is_valid(ttData.value)
+         && (ttData.bound & (ttData.value >= beta ? BOUND_LOWER : BOUND_UPPER)))
++    {
++        diagnosticReturn(ttData.value, true);
+         return ttData.value;
++    }
+ 
+     // Step 4. Static evaluation of the position
+     Value unadjustedStaticEval = VALUE_NONE;
+@@ -1886,6 +1930,8 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
+     if (!is_decisive(bestValue) && bestValue > beta)
+         bestValue = (462 * bestValue + 562 * beta) / 1024;
+ 
++    diagnosticReturn(bestValue, false);
++
+     // Step 10. Save gathered info in transposition table. The static evaluation
+     // is saved as it was before adjustment by correction history.
+     ttWriter.write(posKey, value_to_tt(bestValue, ss->ply), pvHit,

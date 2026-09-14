@@ -1,0 +1,10 @@
+uci
+setoption name Threads value 1
+setoption name Hash value 16
+setoption name SyzygyProbeLimit value 0
+isready
+ucinewgame
+position fen 4k2q/8/8/8/8/8/8/R3K3 b - - 0 1 moves e8f8 e1f1 f8e8 f1e1 e8f8 e1f1
+d
+go depth 1 searchmoves f8e8
+quit

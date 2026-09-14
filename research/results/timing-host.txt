@@ -1,0 +1,9 @@
+machdep.cpu.brand_string: Apple M1 Max
+hw.physicalcpu: 10
+hw.logicalcpu: 10
+hw.memsize: 34359738368
+kern.osrelease: 27.0.0
+Apple clang version 21.0.0 (clang-2100.3.34.2)
+Target: arm64-apple-darwin27.0.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin

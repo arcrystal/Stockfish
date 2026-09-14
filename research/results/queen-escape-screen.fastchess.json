@@ -1,0 +1,163 @@
+{
+    "resign": {
+        "move_count": 3,
+        "score": 600,
+        "twosided": false,
+        "enabled": true
+    },
+    "draw": {
+        "move_number": 34,
+        "move_count": 8,
+        "score": 20,
+        "enabled": true
+    },
+    "maxmoves": {
+        "move_count": 1,
+        "enabled": false
+    },
+    "tb_adjudication": {
+        "syzygy_dirs": "",
+        "max_pieces": 0,
+        "ignore_50_move_rule": false,
+        "enabled": false
+    },
+    "opening": {
+        "file": "/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/books/UHO_Lichess_4852_v1.epd",
+        "format": 0,
+        "order": 0,
+        "plies": -1,
+        "start": 1
+    },
+    "pgn": {
+        "additional_lines_rgx": [],
+        "event_name": "Fastchess Tournament",
+        "site": "?",
+        "file": "/Users/acrystal/Desktop/Coding/Games/Stockfish/research/results/queen-escape-screen.pgn",
+        "notation": 0,
+        "append_file": true,
+        "track_nodes": true,
+        "track_seldepth": false,
+        "track_nps": false,
+        "track_hashfull": false,
+        "track_tbhits": false,
+        "track_timeleft": false,
+        "track_latency": false,
+        "track_pv": false,
+        "min": false,
+        "crc": false
+    },
+    "epd": {
+        "file": "",
+        "append_file": true
+    },
+    "sprt": {
+        "alpha": 0.0,
+        "beta": 0.0,
+        "elo0": 0.0,
+        "elo1": 0.0,
+        "model": "normalized",
+        "enabled": false
+    },
+    "config_name": "/Users/acrystal/Desktop/Coding/Games/Stockfish/research/results/queen-escape-screen.fastchess.json",
+    "output": 0,
+    "seed": 20260917,
+    "variant": 0,
+    "type": 0,
+    "gauntlet_seeds": 1,
+    "ratinginterval": 100,
+    "scoreinterval": 100,
+    "wait": 0,
+    "autosaveinterval": 0,
+    "games": 2,
+    "rounds": 500,
+    "concurrency": 6,
+    "force_concurrency": false,
+    "recover": false,
+    "noswap": false,
+    "reverse": false,
+    "report_penta": true,
+    "affinity": false,
+    "check_mate_pvs": false,
+    "show_latency": false,
+    "log": {
+        "file": "",
+        "level": 3,
+        "append_file": true,
+        "compress": false,
+        "realtime": true,
+        "engine_coms": false
+    },
+    "engines": [
+        {
+            "name": "candidate",
+            "dir": "",
+            "cmd": "/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/queen-escape/src/stockfish",
+            "args": "",
+            "restart": false,
+            "options": [
+                [
+                    "Hash",
+                    "16"
+                ],
+                [
+                    "Threads",
+                    "1"
+                ]
+            ],
+            "limit": {
+                "tc": {
+                    "increment": 10,
+                    "fixed_time": 0,
+                    "time": 1000,
+                    "moves": 0,
+                    "timemargin": 0
+                },
+                "nodes": 0,
+                "plies": 0
+            },
+            "variant": 0
+        },
+        {
+            "name": "baseline",
+            "dir": "",
+            "cmd": "/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/stockfish-baseline",
+            "args": "",
+            "restart": false,
+            "options": [
+                [
+                    "Hash",
+                    "16"
+                ],
+                [
+                    "Threads",
+                    "1"
+                ]
+            ],
+            "limit": {
+                "tc": {
+                    "increment": 10,
+                    "fixed_time": 0,
+                    "time": 1000,
+                    "moves": 0,
+                    "timemargin": 0
+                },
+                "nodes": 0,
+                "plies": 0
+            },
+            "variant": 0
+        }
+    ],
+    "stats": {
+        "candidate vs baseline": {
+            "wins": 267,
+            "losses": 262,
+            "draws": 471,
+            "penta_WW": 8,
+            "penta_WD": 121,
+            "penta_WL": 130,
+            "penta_DD": 114,
+            "penta_LD": 122,
+            "penta_LL": 5
+        }
+    }
+}

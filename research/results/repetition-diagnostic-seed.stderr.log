@@ -1,0 +1,2 @@
+QREP_EVENT route=final pv=1 check=0 ply=1 pieces=4 rule50=7 alpha_in=-32001 beta_in=32001 alpha_now=-1 returned=-351 floor=-1 fen="4k2q/8/8/8/8/8/8/R4K2 w - - 7 5" path="f8e8 "
+QREP_TOTAL detected=1 continued=1 tt_below=0 final_below=1 logged=1

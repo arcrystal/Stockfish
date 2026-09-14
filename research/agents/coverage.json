@@ -1,0 +1,1088 @@
+{
+  "baseline": "031dfeb437fa6b06cdbdf4ef89dfb82f6b83c4d3",
+  "files": {
+    ".clang-format": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "a470cc0b88d544f6b504950027c34245c7522fea",
+      "category": "project metadata/documentation/license",
+      "lines": 44,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".git-blame-ignore-revs": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "8f340d61fca5f2daad6be885e6cd3f0fbb043d17",
+      "category": "project metadata/documentation/license",
+      "lines": 11,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".gitattributes": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "e4870c739e6b0f4118c874adf48f608796c83573",
+      "category": "project metadata/documentation/license",
+      "lines": 2,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/ISSUE_TEMPLATE/BUG-REPORT.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "4ec294a6e071b8610473b1d18980028c2878d478",
+      "category": "test/tooling",
+      "lines": 71,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/ISSUE_TEMPLATE/config.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "0666eb32fb0eb3b70f48bddaa4d66c33e5f9823d",
+      "category": "test/tooling",
+      "lines": 8,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/ci/arm_matrix.json": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "b4fb5d3c0760707f891586c1297f42c00e206eb5",
+      "category": "test/tooling",
+      "lines": 42,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/ci/libcxx17.imp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "d3a262b54e82d6d49ce50cc7d6ae3153abe53911",
+      "category": "test/tooling",
+      "lines": 22,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/ci/universal_matrix.json": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "ce31b602b75c147b29e1bd6a5021d47e58a63449",
+      "category": "test/tooling",
+      "lines": 60,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/arm_compilation.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "ea9ffe05325a52790cddc848efcacee5a9e50be3",
+      "category": "test/tooling",
+      "lines": 98,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/avx2_compilers.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "40581d20fe0412c8ab8024a33e80f0b5d45a458d",
+      "category": "test/tooling",
+      "lines": 95,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/clang-format.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "80bbb148d8ca763673560246d471fc61f7b748e3",
+      "category": "test/tooling",
+      "lines": 62,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/codeql.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "f23f19849ec70446d6213a6e002bffe2391c27d3",
+      "category": "test/tooling",
+      "lines": 59,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/games.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "9c3283d92f549404bfcc4744c41eed2726f6223f",
+      "category": "test/tooling",
+      "lines": 43,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/iwyu.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "bd3d17b3b0bef77b4fb47d838c0b895de58eb836",
+      "category": "test/tooling",
+      "lines": 49,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/matetrack.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "a886a5c0db9a0d76b0ce0c445d692adbd89a398f",
+      "category": "test/tooling",
+      "lines": 155,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/msvc.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "7fcaff40f20c8b6f6e470bee2180cdaff72f56e1",
+      "category": "test/tooling",
+      "lines": 56,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/official_release.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "8904d0f6fd299340a21d2ec0488dce1a31450f1b",
+      "category": "test/tooling",
+      "lines": 126,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/sanitizers.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "aaf2df2dbaec230abe6635a88f27b526071ed8f8",
+      "category": "test/tooling",
+      "lines": 94,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/stockfish.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "6232dc5cc652abc7e80ed81430507554541e0e5d",
+      "category": "test/tooling",
+      "lines": 210,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/tests.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "b502b82ecfa7f56aec4c8f26384f59bf6057fdb0",
+      "category": "test/tooling",
+      "lines": 405,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/universal_compilation.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "ce6406de5207b008d0d92b64edda8a863e66e661",
+      "category": "test/tooling",
+      "lines": 327,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/upload_binaries.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "ee245fda39853580277a6483730fb6b2aaacceec",
+      "category": "test/tooling",
+      "lines": 86,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".github/workflows/wasm_compilation.yml": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "12f23c6839a5d30bf1e518fe3e48d8c004a5f682",
+      "category": "test/tooling",
+      "lines": 51,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    ".gitignore": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "584f7bd45f78cafb136a33add8bc05ac16f3f6cc",
+      "category": "project metadata/documentation/license",
+      "lines": 22,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "AUTHORS": {
+      "status": "full read",
+      "reader": "orchestration",
+      "scope": "Full metadata/license reading; not a novel engine strategy.",
+      "git_blob": "c1b5174e413d613b0903b01c1f153ce1055a1f04",
+      "category": "project metadata/documentation/license",
+      "lines": 299,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "CITATION.cff": {
+      "status": "full read",
+      "reader": "orchestration",
+      "scope": "Full metadata/license reading; not a novel engine strategy.",
+      "git_blob": "bc0889a8b69e11adbf1e86fa754c2a1c76c02f46",
+      "category": "project metadata/documentation/license",
+      "lines": 23,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "CONTRIBUTING.md": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "07fe9f542fc13939b4961a65932cdb36b6fb4bbe",
+      "category": "project metadata/documentation/license",
+      "lines": 96,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "Copying.txt": {
+      "status": "full read",
+      "reader": "orchestration",
+      "scope": "Full metadata/license reading; not a novel engine strategy.",
+      "git_blob": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "category": "project metadata/documentation/license",
+      "lines": 674,
+      "kind": "license text",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "README.md": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "621f1d13076fe3af45f52ce13002290f7a7973e0",
+      "category": "project metadata/documentation/license",
+      "lines": 161,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "Top CPU Contributors.txt": {
+      "status": "full read",
+      "reader": "orchestration",
+      "scope": "Full metadata/license reading; not a novel engine strategy.",
+      "git_blob": "941e1323bbd1f646824b0233413ab445a26f6191",
+      "category": "project metadata/documentation/license",
+      "lines": 381,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "scripts/.gitattributes": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "dfdb8b771ce07609491fa2e83698969fd917a135",
+      "category": "test/tooling",
+      "lines": 1,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "scripts/check_universal.sh": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "6ffab1dc70c1d6684462e2d7702b30e4fe4dd330",
+      "category": "test/tooling",
+      "lines": 91,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "scripts/check_universal_arm.sh": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "7cef94a531e333d875d6f5a605cc1296579b3bd7",
+      "category": "test/tooling",
+      "lines": 58,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "scripts/check_universal_macos.sh": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "93c2f6f033d93666061d98fcaa2969e348d4f72e",
+      "category": "test/tooling",
+      "lines": 62,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "scripts/check_universal_riscv.sh": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "d55f756f63f543c17349a8867bdca2d9b046c659",
+      "category": "test/tooling",
+      "lines": 73,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "scripts/get_native_properties.sh": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "e92b11c171d141ccd5d50ffafe48b1c3e34a6b53",
+      "category": "test/tooling",
+      "lines": 394,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "scripts/net.sh": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "222073b8ed443db0675e82cccaf694d846cd37ea",
+      "category": "test/tooling",
+      "lines": 84,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/Makefile": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "e5c94df37323255c94b750bcd1f2ff6b4a6a1b6a",
+      "category": "engine source/build",
+      "lines": 1536,
+      "kind": "build rules",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/attacks.cpp": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "2d7441409545b26e08a10897bddf254d589ff622",
+      "category": "engine source/build",
+      "lines": 198,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/attacks.h": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "3518368c13e65e50a2e2744657e2d89b4afff207",
+      "category": "engine source/build",
+      "lines": 343,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/benchmark.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "a21ba072a408d72f5a58e280fdaca0c2804ff3b2",
+      "category": "engine source/build",
+      "lines": 530,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/benchmark.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "a6606e78cad6feb990fc4b84ddc7fe7e31d1dc5f",
+      "category": "engine source/build",
+      "lines": 42,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/bitboard.cpp": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "4e24456a55464941b8580e09b45165cef985a06c",
+      "category": "engine source/build",
+      "lines": 44,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/bitboard.h": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "57bbda6b2ec33bbbecde069d05e602cefda7a97a",
+      "category": "engine source/build",
+      "lines": 274,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/engine.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "3179efa4a6c5119bf0d07f42afe92e5b0a124ca1",
+      "category": "engine source/build",
+      "lines": 405,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/engine.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "c4c057827478b0034c93e00c0ff745c4dd57d2e4",
+      "category": "engine source/build",
+      "lines": 142,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/evaluate.cpp": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "7ec314fb898c017b132b099f8c344e8feeaf73f4",
+      "category": "engine source/build",
+      "lines": 105,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/evaluate.h": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "82c619d2e01323f0b0268749e360a24868298100",
+      "category": "engine source/build",
+      "lines": 55,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/history.h": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "53883dda577d33e683302d4540147b5b0d6fea8f",
+      "category": "engine source/build",
+      "lines": 261,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/incbin/UNLICENCE": {
+      "status": "full read",
+      "reader": "orchestration",
+      "scope": "Full metadata/license reading; not a novel engine strategy.",
+      "git_blob": "32484ab5e7026f9a1f15c2f8c08b1418802e02a8",
+      "category": "engine source/build",
+      "lines": 26,
+      "kind": "license text",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/incbin/incbin.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "3f662e15dad1864dc6031c6491a21a6815994f1a",
+      "category": "engine source/build",
+      "lines": 476,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/main.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "304b2be0688c11577f9029665c247cdb50737b6a",
+      "category": "engine source/build",
+      "lines": 61,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/memory.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "cf8d51d9dabc155d9052accff6308e982b632b3e",
+      "category": "engine source/build",
+      "lines": 274,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/memory.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "57b6da064cff0d00b578696a096f93090d33061e",
+      "category": "engine source/build",
+      "lines": 407,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/misc.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "60a03d44fbc3e17a22ea712f5df76eb45f1a5070",
+      "category": "engine source/build",
+      "lines": 644,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/misc.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "a47c86b47f14ee76f4593d366000769dced8fa48",
+      "category": "engine source/build",
+      "lines": 603,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/movegen.cpp": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "586bc99db89727e455d48e3d05ac4c5a19771764",
+      "category": "engine source/build",
+      "lines": 291,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/movegen.h": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "ee79ea27ee4da69856e8ce1203966c078e48e7e0",
+      "category": "engine source/build",
+      "lines": 73,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/movepick.cpp": {
+      "status": "full read",
+      "reader": "history_researcher (reported, idea 04)",
+      "git_blob": "ff99df13472d1a34de8d7139ea71cf2ae69f1f86",
+      "category": "engine source/build",
+      "lines": 387,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/movepick.h": {
+      "status": "full read",
+      "reader": "history_researcher (reported, idea 04)",
+      "git_blob": "34c9fb30ecc91629ab956bb9bcd750363093ec57",
+      "category": "engine source/build",
+      "lines": 78,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/features/full_threats.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "ac4f79da58c983e1a46c989697428e4edf1abbdf",
+      "category": "engine source/build",
+      "lines": 324,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/features/full_threats.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "f55e9f1d69d972b18ada031091401c8cb9c52be3",
+      "category": "engine source/build",
+      "lines": 100,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/features/half_ka_v2_hm.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "33a7cd2e5925a14177881008bb2237def8b4fb60",
+      "category": "engine source/build",
+      "lines": 106,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/features/half_ka_v2_hm.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "a9b5d9588a44133dcd5b0a7a3f5302f10f6605c3",
+      "category": "engine source/build",
+      "lines": 127,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/features/pp_3wide.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "fca1dfe73953118ddda8692e25402285ba529238",
+      "category": "engine source/build",
+      "lines": 238,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/features/pp_3wide.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "9ff15593123b6d95992e6ec8fcab7f68af2615e5",
+      "category": "engine source/build",
+      "lines": 71,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/layers/affine_transform.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "c8a1c01bb274395934b2f12633d67f09fa0934f3",
+      "category": "engine source/build",
+      "lines": 426,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/layers/affine_transform_sparse_input.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "6b44700a5481adb4a110069ebed5b72ce67bcc07",
+      "category": "engine source/build",
+      "lines": 445,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/layers/clipped_relu.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "68b03c8c9d3596d5807e328c7f321cfe203b94eb",
+      "category": "engine source/build",
+      "lines": 178,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/layers/sqr_clipped_relu.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "8a76c2b8dd976b692bb05971498732f1250e8517",
+      "category": "engine source/build",
+      "lines": 247,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/network.cpp": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "e6f166d4ffc7124e0ca5c03df1de47032d928d61",
+      "category": "engine source/build",
+      "lines": 367,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/network.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "4bcae5276a8938b27c2b82f1e260b9af92fa6812",
+      "category": "engine source/build",
+      "lines": 121,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/nnue_accumulator.cpp": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "b7fb950dbe4d7a640881ff688db0b4939f0fe5a0",
+      "category": "engine source/build",
+      "lines": 953,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/nnue_accumulator.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "e32decc18b71e39b7ff972c4c7aba10f00438e7c",
+      "category": "engine source/build",
+      "lines": 142,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/nnue_architecture.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "8da61ed12b52628ff7fe6c9f66af36abdfa2d43d",
+      "category": "engine source/build",
+      "lines": 174,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/nnue_common.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "6a1b68bd6a89ed4014c3ae00ca7e197895d81544",
+      "category": "engine source/build",
+      "lines": 352,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/nnue_feature_transformer.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "53f66d9d337ec98275154415ca87902df54de22b",
+      "category": "engine source/build",
+      "lines": 440,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/nnue_misc.cpp": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "ce004c4825e4238680f99b1ee28393556d570de7",
+      "category": "engine source/build",
+      "lines": 100,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/nnue_misc.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "44d40dfa63f78c010c38ddf33cc7b46c07fe192d",
+      "category": "engine source/build",
+      "lines": 66,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/nnz_helper.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "bb5d309d92a3cefa0c2c7404ba98205557b57f7a",
+      "category": "engine source/build",
+      "lines": 171,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/nnue/simd.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 06)",
+      "git_blob": "048ab93eaf96ae3383baf56f539505a25f8c0720",
+      "category": "engine source/build",
+      "lines": 532,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/numa.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "d38da836a8d6c2e8fa60e3704c1c3eb1e4697c7d",
+      "category": "engine source/build",
+      "lines": 1726,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/perft.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "2c18c8b814d3a02b4f1db46772aa52afbe128f79",
+      "category": "engine source/build",
+      "lines": 71,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/position.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "51a10b56cc8a4c787fc99a6deeb3ce495ed46cce",
+      "category": "engine source/build",
+      "lines": 1674,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/position.h": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "04336b370947831209b0e6c436a7cd4b3e539ded",
+      "category": "engine source/build",
+      "lines": 447,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/score.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "ea62577b9f48fae1e6900ec21239e44470ff32df",
+      "category": "engine source/build",
+      "lines": 48,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/score.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "cf89d3cdd54ca9bd4c0b54f96bce2eb204e92506",
+      "category": "engine source/build",
+      "lines": 70,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/search.cpp": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "842fd157ac4b85824e8ef59f45a9c0cdbdab7d62",
+      "category": "engine source/build",
+      "lines": 2384,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/search.h": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "f2cf78e2f7f45370a425e3f9353dd9114302d3f4",
+      "category": "engine source/build",
+      "lines": 424,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/shm.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "ae78712225d574b375d31ed9ce39c333e0f8faad",
+      "category": "engine source/build",
+      "lines": 631,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/shm_unix.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "9e6f009e65b63170cedd46112b354f15f26e1e01",
+      "category": "engine source/build",
+      "lines": 608,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/syzygy/tbprobe.cpp": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 07)",
+      "git_blob": "c1d40081438ff28bac94fc5085a72b40789bb747",
+      "category": "engine source/build",
+      "lines": 1968,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/syzygy/tbprobe.h": {
+      "status": "full read",
+      "reader": "search_researcher (reported, idea 07)",
+      "git_blob": "7b60d6e20546c221c5e1a4f26c5b32bf04396115",
+      "category": "engine source/build",
+      "lines": 85,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/thread.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "cf76a5cf0fcda884ff3c3a5404c858995bd5a1fd",
+      "category": "engine source/build",
+      "lines": 462,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/thread.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "9014adddfbcfbd7ccd7b7736f64b679f4266b4bb",
+      "category": "engine source/build",
+      "lines": 182,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/thread_native.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "fce1c877cef13b2570673fc018e64b00f3b13fa3",
+      "category": "engine source/build",
+      "lines": 167,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/timeman.cpp": {
+      "status": "full read",
+      "reader": "orchestration; history_researcher (idea 05)",
+      "git_blob": "d6fb11d38a8d955f90691d33b92633977c96f50e",
+      "category": "engine source/build",
+      "lines": 168,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/timeman.h": {
+      "status": "full read",
+      "reader": "orchestration; history_researcher (idea 05)",
+      "git_blob": "bb74cdd69942a48cc5b9c2642be315d408200b80",
+      "category": "engine source/build",
+      "lines": 73,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/tt.cpp": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "6df06969d348e43d6eecb3352133664a4c61fa61",
+      "category": "engine source/build",
+      "lines": 298,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/tt.h": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "3de1a97cd7a9b7ea06d580c729b845b5d28be809",
+      "category": "engine source/build",
+      "lines": 125,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/tune.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "f930c267e22ecb6b68712c1f89da3b03720bf77a",
+      "category": "engine source/build",
+      "lines": 126,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/tune.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "bc3fb3553607d48a645658527f12c20ff0f6ceee",
+      "category": "engine source/build",
+      "lines": 193,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/types.h": {
+      "status": "full read",
+      "reader": "root (reported)",
+      "git_blob": "f51bdb89f5116dfa0262ae44ac33df5fe4197dfc",
+      "category": "engine source/build",
+      "lines": 498,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/uci.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "5dd2d038871bba4da1fa29909e05f5f4ff78d620",
+      "category": "engine source/build",
+      "lines": 704,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/uci.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "4d3c4cbbd1d182e7ca40ffacfcbfab8c36f26b5f",
+      "category": "engine source/build",
+      "lines": 84,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/ucioption.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "cbbe00790bcc01b1765fbfbc0c5ce47d329e383e",
+      "category": "engine source/build",
+      "lines": 213,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/ucioption.h": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "2fe395231d710f090a65529339bb2e507b006fae",
+      "category": "engine source/build",
+      "lines": 106,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/universal/entry_arm64.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "158bc64d6b7955a8c6563360d3aeee2f033833d1",
+      "category": "engine source/build",
+      "lines": 76,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/universal/entry_riscv64.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "42d8e375a5afb4d2ea5b758d59a9ab664fcfaba3",
+      "category": "engine source/build",
+      "lines": 96,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/universal/entry_x86.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "4d32926be742ba13e3d78ae7eb5bc05122dc02fd",
+      "category": "engine source/build",
+      "lines": 177,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/universal/nnue_embed.cpp": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "9b29f8c166f27b66c9ac7021df42e81f03963fad",
+      "category": "engine source/build",
+      "lines": 85,
+      "kind": "C++ source/header",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/universal/patch_x86_slice.sh": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "ec076a9022a44afda42eb0fe883799d10ebcc6b4",
+      "category": "engine source/build",
+      "lines": 73,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "src/universal/rewrite_asm_sections.awk": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "01e5d1049ea7bd9e386a0685eca48b8a6ff90832",
+      "category": "engine source/build",
+      "lines": 83,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "tests/.gitattributes": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "dfdb8b771ce07609491fa2e83698969fd917a135",
+      "category": "test/tooling",
+      "lines": 1,
+      "kind": "text metadata/documentation/configuration",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "tests/instrumented.py": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "3207617d9dd6d05d1b650dfe39c21f0add437d4a",
+      "category": "test/tooling",
+      "lines": 758,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "tests/perft.sh": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "bb32bee56790ad444cef91c3ca9857acff065a24",
+      "category": "test/tooling",
+      "lines": 93,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "tests/reprosearch.sh": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "a947e02c043547dbd094a0fd5269d0b3665f2c25",
+      "category": "test/tooling",
+      "lines": 63,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "tests/signature.sh": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "ad96d2ee35e7494f5906232ae3db0759e88318b6",
+      "category": "test/tooling",
+      "lines": 42,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    },
+    "tests/testing.py": {
+      "status": "full read",
+      "reader": "orchestration",
+      "git_blob": "2d628323658a740efbfe2b67eee71491cab850be",
+      "category": "test/tooling",
+      "lines": 427,
+      "kind": "executable tooling/test source",
+      "read_claim": "Complete text inspected; no execution or correctness proof implied."
+    }
+  },
+  "summary": {
+    "tracked_files": 119,
+    "fully_read": 119,
+    "baseline_lines": 33039,
+    "pending_files": []
+  },
+  "scope": "All tracked text files at baseline. Does not include exhaustive history, downloaded NNUE weights, generated binaries, untracked research artifacts, or complete external repositories."
+}

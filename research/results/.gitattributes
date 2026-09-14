@@ -1,0 +1,6 @@
+# Preserve raw tool output and patch context exactly as collected.
+*.log -whitespace
+*.pgn -whitespace
+*.stdout -whitespace
+*.stderr -whitespace
+*.patch -whitespace

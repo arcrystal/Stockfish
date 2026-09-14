@@ -1,0 +1,73 @@
+{
+  "purpose": "Fixed-sample local screening; not a Fishtest run or proof of an Elo gain.",
+  "started_utc": "2026-09-14T20:38:18.941237+00:00",
+  "inputs": {
+    "candidate": {
+      "path": "/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/queen-escape/src/stockfish",
+      "sha256": "71f5c3aee172d399551b9de785e34d0fe3fb8a4c1394e7c165488bd1be416445"
+    },
+    "base": {
+      "path": "/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/stockfish-baseline",
+      "sha256": "3bc6989c07a680e8478a997b5fcafb877724ac4909509341d1b0d373e7eb6083"
+    },
+    "runner": {
+      "path": "/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/fastchess/fastchess",
+      "sha256": "3518b3dba0154c0402e03e6d5173ad3179708d16ef4222b0f61cf44bd3a22f8d"
+    },
+    "book": {
+      "path": "/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/books/UHO_Lichess_4852_v1.epd",
+      "sha256": "7a7f6470615a69c6cf23d565417701d38732876f480af90d67b42abade35644a"
+    }
+  },
+  "command": [
+    "/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/fastchess/fastchess",
+    "-engine",
+    "name=candidate",
+    "cmd=/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/queen-escape/src/stockfish",
+    "-engine",
+    "name=baseline",
+    "cmd=/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/stockfish-baseline",
+    "-each",
+    "proto=uci",
+    "tc=1+0.01",
+    "option.Hash=16",
+    "option.Threads=1",
+    "-openings",
+    "file=/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/books/UHO_Lichess_4852_v1.epd",
+    "format=epd",
+    "order=random",
+    "-srand",
+    "20260917",
+    "-rounds",
+    "500",
+    "-games",
+    "2",
+    "-repeat",
+    "-concurrency",
+    "6",
+    "-resign",
+    "movecount=3",
+    "score=600",
+    "-draw",
+    "movenumber=34",
+    "movecount=8",
+    "score=20",
+    "-report",
+    "penta=true",
+    "-ratinginterval",
+    "100",
+    "-scoreinterval",
+    "100",
+    "-config",
+    "outname=/Users/acrystal/Desktop/Coding/Games/Stockfish/research/results/queen-escape-screen.fastchess.json",
+    "-autosaveinterval",
+    "0",
+    "-pgnout",
+    "file=/Users/acrystal/Desktop/Coding/Games/Stockfish/research/results/queen-escape-screen.pgn",
+    "nodes=true"
+  ],
+  "shell_command": "/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/fastchess/fastchess -engine name=candidate cmd=/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/queen-escape/src/stockfish -engine name=baseline cmd=/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/stockfish-baseline -each proto=uci tc=1+0.01 option.Hash=16 option.Threads=1 -openings file=/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/books/UHO_Lichess_4852_v1.epd format=epd order=random -srand 20260917 -rounds 500 -games 2 -repeat -concurrency 6 -resign movecount=3 score=600 -draw movenumber=34 movecount=8 score=20 -report penta=true -ratinginterval 100 -scoreinterval 100 -config outname=/Users/acrystal/Desktop/Coding/Games/Stockfish/research/results/queen-escape-screen.fastchess.json -autosaveinterval 0 -pgnout file=/Users/acrystal/Desktop/Coding/Games/Stockfish/research/results/queen-escape-screen.pgn nodes=true",
+  "planned_games": 1000,
+  "finished_utc": "2026-09-14T20:45:21.021455+00:00",
+  "exit_code": 0
+}
