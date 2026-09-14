@@ -1674,9 +1674,10 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
     assert(PvNode || (alpha == beta - 1));
 
     // Check if we have an upcoming move that draws by repetition
+    Value repetitionValue = -VALUE_INFINITE;
     if (alpha < VALUE_DRAW && pos.upcoming_repetition(ss->ply))
     {
-        alpha = value_draw(nodes);
+        alpha = repetitionValue = value_draw(nodes);
         if (alpha >= beta)
             return alpha;
     }
@@ -1723,7 +1724,7 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
     // At non-PV nodes we check for an early TT cutoff
     if (!PvNode && ttData.depth >= DEPTH_QS && is_valid(ttData.value)
         && (ttData.bound & (ttData.value >= beta ? BOUND_LOWER : BOUND_UPPER)))
-        return ttData.value;
+        return std::max(ttData.value, repetitionValue);
 
     // Step 4. Static evaluation of the position
     Value unadjustedStaticEval = VALUE_NONE;
@@ -1885,6 +1886,11 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
 
     if (!is_decisive(bestValue) && bestValue > beta)
         bestValue = (462 * bestValue + 562 * beta) / 1024;
+
+    // The drawing move may be quiet and absent from quiescence move generation.
+    // Keep its history-dependent value out of this node's TT write.
+    if (bestValue < repetitionValue)
+        return repetitionValue;
 
     // Step 10. Save gathered info in transposition table. The static evaluation
     // is saved as it was before adjustment by correction history.
