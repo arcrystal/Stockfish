@@ -244,6 +244,15 @@ ExtMove* MovePicker::score(const MoveList<Type>& ml) {
             // penalty for moving to a square threatened by a lesser piece
             // or bonus for escaping an attack by a lesser piece.
             int v = 20 * (bool(threatByLesser[pt] & from) - bool(threatByLesser[pt] & to));
+            // The queen's origin can hide an attack on its destination.
+            if (pt == QUEEN && v > 0)
+            {
+                const auto [bishopAttacks, rookAttacks] =
+                  Attacks::both_attacks_bb(to, pos.pieces() ^ from);
+                if ((bishopAttacks & pos.pieces(~us, BISHOP))
+                    || (rookAttacks & pos.pieces(~us, ROOK)))
+                    v = 0;
+            }
             value += PieceValue[pt] * v;
 
 
