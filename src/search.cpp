@@ -908,11 +908,13 @@ Value Search::Worker::search(
                 auto [ttHitNext, ttDataNext, ttWriterNext] = tt.probe(nextPosKey);
                 pos.undo_move(ttData.move);
 
-                // Check that the ttValue after the tt move would also trigger a cutoff
+                // Veto the cutoff only when the child bound contradicts it.
                 if (!is_valid(ttDataNext.value))
                     return ttData.value;
 
-                if ((ttData.value >= beta) == (-ttDataNext.value >= beta))
+                if ((ttData.value >= beta) == (-ttDataNext.value >= beta)
+                    || !(ttDataNext.bound
+                         & (ttData.value >= beta ? BOUND_LOWER : BOUND_UPPER)))
                     return ttData.value;
             }
             else
