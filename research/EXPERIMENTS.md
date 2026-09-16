@@ -34,7 +34,7 @@ The fixed local screen completed all 1,000 games: **265 wins, 261 losses, 474 dr
 
 ## Fishtest plan and access
 
-The first candidate was submitted successfully: [Fishtest run 6aa85960cb562be55c88e907](https://tests.stockfishchess.org/tests/view/6aa85960cb562be55c88e907). It has been approved by a maintainer and assigned workers. Settings: standard STC, 10+0.1, one thread, Hash=16 on both sides, normalized SPRT bounds [0,2], normal priority and throughput. No completed Fishtest Elo measurement is available yet. The public run snapshot is preserved in `results/fishtest-correction-bound.json`.
+The first candidate was submitted successfully: [Fishtest run 6aa85960cb562be55c88e907](https://tests.stockfishchess.org/tests/view/6aa85960cb562be55c88e907). It has been approved by a maintainer and assigned workers. Settings: standard STC, 10+0.1, one thread, Hash=16 on both sides, normalized SPRT bounds [0,2], normal priority and throughput. This trial subsequently completed with a rejected gainer hypothesis; see the terminal record below. The public run snapshot is preserved in `results/fishtest-correction-bound.json`.
 
 Use a source branch on the personal GitHub fork, exact baseline/candidate revisions, verified bench signatures, and the form's current standard STC settings. Let the standard sequential test reach a terminal result. If STC passes, perform independent LTC confirmation; search-scaling changes may additionally require the longer controls indicated by the source. The current [contribution/testing guide](https://github.com/official-stockfish/fishtest/wiki/Creating-my-first-test) and [statistical methodology](https://github.com/official-stockfish/fishtest/wiki/Fishtest-Mathematics) govern interpretation. Fishtest measures relative strength under its test conditions, not an absolute universal engine rating.
 
@@ -88,6 +88,24 @@ Bench: **1586754**, published commit `948232b7da3394fc02fd5ed60a7d4ce566d3f7d0`.
 
 The fixed local screen completed **283 wins, 274 losses, 443 draws; +3.13 Elo ±11.93**, pentanomial `[8,116,244,123,9]`, without an engine failure. This is inconclusive. The causal reproduction and successful checks justify further testing independently of its small positive point estimate.
 
-Submitted [Fishtest run 6aa85fe9cb562be55c88e90e](https://tests.stockfishchess.org/tests/view/6aa85fe9cb562be55c88e90e). It is now approved and running. It uses the same pinned baseline and standard STC settings as candidate 1: 10+0.1, one thread, Hash=16, normalized SPRT [0,2], normal priority/throughput. The public API confirms the intended source revisions, signatures, network, fork, and settings. The saved snapshot is `results/fishtest-repetition-floor.json`.
+Submitted [Fishtest run 6aa85fe9cb562be55c88e90e](https://tests.stockfishchess.org/tests/view/6aa85fe9cb562be55c88e90e). It was approved and ran to a terminal rejection, recorded below. It uses the same pinned baseline and standard STC settings as candidate 1: 10+0.1, one thread, Hash=16, normalized SPRT [0,2], normal priority/throughput. The public API confirms the intended source revisions, signatures, network, fork, and settings. The saved snapshot is `results/fishtest-repetition-floor.json`.
 
 At the 14 September 2026 23:39 UTC follow-up, the repetition trial had completed 2,080 games (527 wins, 514 losses, 1,039 draws), with SPRT LLR +0.123 and no terminal state. The correction-history trial had completed 9,216 games, with LLR −1.535 and no terminal state. Neither trial had crashes or time losses. Both remain within their declared stopping boundaries, so both are left running. These are progress snapshots, not completed Elo findings; no LTC trial or additional candidate is started at this stage.
+
+## Terminal STC results and next trials — 16 September 2026
+
+Both initial tests reached Fishtest's terminal `rejected` state without manual stopping. Neither advances to LTC or gets combined into another candidate. The API-reported Elo intervals below are 95% intervals under these STC conditions.
+
+| Candidate | W / L / D | Games | Elo [95% interval] | LLR | Crashes / time losses |
+|---|---|---:|---|---:|---|
+| Correction bound | 8125 / 8333 / 15958 | 32,416 | −2.07 [−3.97, −0.15] | −2.9394 | 0 / 0 |
+| Repetition floor | 21869 / 21991 / 42636 | 86,496 | −0.34 [−1.45, +0.80] | −2.9341 | 0 / 1 |
+
+Pentanomials are `[49,3940,8432,3744,43]` and `[114,9104,24902,9046,82]`. Server completion timestamps are 15 September 07:33:43 UTC and 22:02:34 UTC. Fishtest reports rejection with overshoot accounting even though displayed LLRs are slightly above the nominal lower boundary; its terminal decision is retained. Correction shows a negative result in these conditions; repetition fails to establish a gain, without establishing a definitive loss. Full terminal API payloads are `results/fishtest-correction-bound-elo.json` and `results/fishtest-repetition-floor-elo.json`. Earlier run snapshots remain historical records.
+
+The next already validated candidates were submitted separately against the original pinned baseline:
+
+- **TT bound direction:** [6aaafaeddbd128aac8fd5081](https://tests.stockfishchess.org/tests/view/6aaafaeddbd128aac8fd5081), exact commit `144dff77ac0d96167a870b8e8c58dda5b6c87f30`, bench 1485122.
+- **Queen escape occupancy:** [6aaafb0fdbd128aac8fd5083](https://tests.stockfishchess.org/tests/view/6aaafb0fdbd128aac8fd5083), exact commit `442230b916e2e17694ddbcd3d94ccc712cd2ba03`, bench 1281886.
+
+Both await approval at submission. Each uses standard STC 10+0.1, one thread, Hash=16, normalized SPRT [0,2], normal priority and throughput, unchanged network and default UHO book. Public API snapshots verify source revisions, signatures and settings. These submissions use the two available slots; no further test will be added while both are active. Selection follows the documented causal investigations, not the inconclusive local point estimates. Standard stopping and independent LTC confirmation after an STC pass remain required.

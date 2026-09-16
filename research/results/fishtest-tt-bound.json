@@ -1,0 +1,91 @@
+{
+  "_id": "6aaafaeddbd128aac8fd5081",
+  "version": 24,
+  "args": {
+    "base_tag": "031dfeb437fa6b06cdbdf4ef89dfb82f6b83c4d3",
+    "new_tag": "codex/tt-bound",
+    "base_nets": [
+      "nn-134a887f4c8f.nnue"
+    ],
+    "new_nets": [
+      "nn-134a887f4c8f.nnue"
+    ],
+    "num_games": 800000,
+    "tc": "10+0.1",
+    "new_tc": "10+0.1",
+    "book": "UHO_Lichess_4852_v1.epd",
+    "book_depth": "8",
+    "threads": 1,
+    "resolved_base": "031dfeb437fa6b06cdbdf4ef89dfb82f6b83c4d3",
+    "resolved_new": "144dff77ac0d96167a870b8e8c58dda5b6c87f30",
+    "msg_base": "Remove unused constexpr_lsb and lsb_index64",
+    "msg_new": "Respect child TT bound direction in cutoff verification",
+    "base_options": "Hash=16",
+    "new_options": "Hash=16",
+    "info": "Respect child TT bound direction in the existing parent-cutoff consistency check. A one-sided child bound should veto the parent cutoff only when its direction establishes disagreement. No added probes or constants; unchanged NNUE. Independent baseline candidate. PGO build, 75 functional tests and 20 reproducibility cases passed. Local 1000-game 1+0.01 paired screen: -1.04 +/-11.21 Elo, inconclusive. Standard STC SPRT; no Elo gain claimed.",
+    "base_signature": "1648567",
+    "new_signature": "1485122",
+    "username": "thecrystalball",
+    "tests_repo": "https://github.com/arcrystal/Stockfish",
+    "auto_purge": false,
+    "throughput": 100,
+    "itp": 100.0,
+    "priority": 0,
+    "adjudication": true,
+    "sprt": {
+      "alpha": 0.05,
+      "beta": 0.05,
+      "elo0": 0.0,
+      "elo1": 2.0,
+      "elo_model": "normalized",
+      "state": "",
+      "llr": 0,
+      "batch_size": 16,
+      "lower_bound": -2.9444389791664403,
+      "upper_bound": 2.9444389791664403,
+      "overshoot": {
+        "last_update": 0,
+        "skipped_updates": 0,
+        "ref0": 0,
+        "m0": 0,
+        "sq0": 0,
+        "ref1": 0,
+        "m1": 0,
+        "sq1": 0
+      }
+    }
+  },
+  "start_time": "2026-09-16 20:24:13.996765+00:00",
+  "last_updated": "2026-09-16 20:24:13.996765+00:00",
+  "tc_base": 10.0,
+  "tasks": [],
+  "approved": false,
+  "approver": "",
+  "bad_tasks": [],
+  "results": {
+    "wins": 0,
+    "losses": 0,
+    "draws": 0,
+    "crashes": 0,
+    "time_losses": 0,
+    "pentanomial": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "workers": 0,
+  "cores": 0,
+  "committed_games": 0,
+  "total_games": 0,
+  "nps": 0.0,
+  "games_per_minute": 0.0,
+  "finished": false,
+  "deleted": false,
+  "failed": false,
+  "failures": 0,
+  "is_green": false,
+  "is_yellow": false
+}
