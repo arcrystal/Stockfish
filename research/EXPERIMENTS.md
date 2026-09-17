@@ -109,3 +109,16 @@ The next already validated candidates were submitted separately against the orig
 - **Queen escape occupancy:** [6aaafb0fdbd128aac8fd5083](https://tests.stockfishchess.org/tests/view/6aaafb0fdbd128aac8fd5083), exact commit `442230b916e2e17694ddbcd3d94ccc712cd2ba03`, bench 1281886.
 
 Both await approval at submission. Each uses standard STC 10+0.1, one thread, Hash=16, normalized SPRT [0,2], normal priority and throughput, unchanged network and default UHO book. Public API snapshots verify source revisions, signatures and settings. These submissions use the two available slots; no further test will be added while both are active. Selection follows the documented causal investigations, not the inconclusive local point estimates. Standard stopping and independent LTC confirmation after an STC pass remain required.
+
+## Second pair terminal results — 17 September 2026
+
+Both independent trials completed with Fishtest SPRT `rejected`, without manual stopping. Neither establishes an improvement or advances to LTC.
+
+| Candidate | W / L / D | Games | Elo [95% interval] | LLR | Crashes / time losses |
+|---|---|---:|---|---:|---|
+| TT bound direction | 11941 / 12126 / 23613 | 47,680 | −1.18 [−2.75, +0.40] | −2.9430 | 0 / 1 |
+| Queen escape occupancy | 13676 / 13850 / 26522 | 54,048 | −0.96 [−2.43, +0.53] | −2.9276 | 0 / 0 |
+
+Pentanomials: `[54,5693,12546,5478,69]` and `[70,6365,14335,6177,77]`. Server completion timestamps: 17 September 09:50:21 UTC and 12:39:06 UTC. Full terminal payloads: `results/fishtest-tt-bound-elo.json` and `results/fishtest-queen-escape-elo.json`. Both intervals include zero; the appropriate decision is failure to establish the intended gain, not a definitive regression claim. Fishtest's terminal decision includes overshoot accounting.
+
+There are now zero active Fishtest experiments. All four previously validated search candidates have rejected STC results, and the exact-output NNUE candidate lacked a demonstrated speed benefit. None is combined or rerolled. The orchestration agent is assigned the next ranked hypothesis from report 01: a logging-only baseline diagnostic for correction-direction conflict and its potential effect on rounded quiet-move reductions. This must establish practical incidence and support the mechanism before a production prototype and its functional checks/local screen can justify another submission. No new rating test is authorized by diagnostic counts alone.

@@ -1,0 +1,102 @@
+{
+  "_id": "6aaafb0fdbd128aac8fd5083",
+  "version": 24,
+  "args": {
+    "base_tag": "031dfeb437fa6b06cdbdf4ef89dfb82f6b83c4d3",
+    "new_tag": "codex/queen-escape",
+    "base_nets": [
+      "nn-134a887f4c8f.nnue"
+    ],
+    "new_nets": [
+      "nn-134a887f4c8f.nnue"
+    ],
+    "num_games": 800000,
+    "tc": "10+0.1",
+    "new_tc": "10+0.1",
+    "book": "UHO_Lichess_4852_v1.epd",
+    "book_depth": "8",
+    "threads": 1,
+    "resolved_base": "031dfeb437fa6b06cdbdf4ef89dfb82f6b83c4d3",
+    "resolved_new": "442230b916e2e17694ddbcd3d94ccc712cd2ba03",
+    "msg_base": "Remove unused constexpr_lsb and lsb_index64",
+    "msg_new": "Check queen escape threats with origin removed",
+    "base_options": "Hash=16",
+    "new_options": "Hash=16",
+    "info": "Remove false queen escape bonuses caused by origin-square occupancy hiding a continuing enemy rook or bishop ray. Recheck an apparent queen escape with the origin removed; preserve genuine escapes. Independent baseline candidate; unchanged NNUE. PGO build, 75 functional tests and 20 reproducibility cases passed. Local 1000-game 1+0.01 paired screen: +1.74 +/-11.70 Elo, inconclusive. Standard STC SPRT; no Elo gain claimed.",
+    "base_signature": "1648567",
+    "new_signature": "1281886",
+    "username": "thecrystalball",
+    "tests_repo": "https://github.com/arcrystal/Stockfish",
+    "auto_purge": false,
+    "throughput": 100,
+    "itp": 123.52864864864867,
+    "priority": 0,
+    "adjudication": true,
+    "sprt": {
+      "alpha": 0.05,
+      "beta": 0.05,
+      "elo0": 0.0,
+      "elo1": 2.0,
+      "elo_model": "normalized",
+      "state": "rejected",
+      "llr": -2.9275790883689323,
+      "batch_size": 16,
+      "lower_bound": -2.9444389791664403,
+      "upper_bound": 2.9444389791664403,
+      "overshoot": {
+        "last_update": 27024,
+        "skipped_updates": 0,
+        "ref0": -2.9275790883689323,
+        "m0": -2.9275790883689323,
+        "sq0": 0.1122199527346076,
+        "ref1": 0.08417723733254434,
+        "m1": 0.08417723733254434,
+        "sq1": 0.0015315137368967042
+      }
+    }
+  },
+  "start_time": "2026-09-16 20:24:47.419000+00:00",
+  "last_updated": "2026-09-17 12:39:06.053000+00:00",
+  "tc_base": 10.0,
+  "tasks": [],
+  "approved": true,
+  "approver": "sg",
+  "bad_tasks": [],
+  "results": {
+    "wins": 13676,
+    "losses": 13850,
+    "draws": 26522,
+    "crashes": 0,
+    "time_losses": 0,
+    "pentanomial": [
+      70,
+      6365,
+      14335,
+      6177,
+      77
+    ]
+  },
+  "workers": 0,
+  "cores": 0,
+  "committed_games": 54048,
+  "total_games": 58624,
+  "nps": 0.0,
+  "games_per_minute": 0.0,
+  "finished": true,
+  "deleted": false,
+  "failed": false,
+  "failures": 0,
+  "is_green": false,
+  "is_yellow": false,
+  "elo": {
+    "a": -2.9444389791664403,
+    "b": 2.9444389791664403,
+    "elo": -0.9626144933641673,
+    "ci": [
+      -2.4338700122588977,
+      0.5281831804798148
+    ],
+    "LOS": 0.10200197871209316,
+    "LLR": -2.9275790883689323
+  }
+}

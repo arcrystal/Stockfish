@@ -4,7 +4,7 @@ Personal fork: [arcrystal/Stockfish](https://github.com/arcrystal/Stockfish). St
 
 **No Elo improvement is established yet.** The correction-history and repetition-floor candidates both completed standard Fishtest STC with a rejected gainer hypothesis: −2.07 Elo over 32,416 games and −0.34 Elo over 86,496 games, respectively. Neither advances to LTC. Their source mechanisms and functional checks remain useful findings, but did not establish a strength gain.
 
-The next independent candidates, [child TT bound direction](https://tests.stockfishchess.org/tests/view/6aaafaeddbd128aac8fd5081) and [queen escape occupancy](https://tests.stockfishchess.org/tests/view/6aaafb0fdbd128aac8fd5083), were submitted on 16 September 2026 and await approval. The [experiment ledger](EXPERIMENTS.md) records exact conditions, terminal statistics, and preserved API evidence.
+The child TT bound and queen escape trials also completed with rejected STC gainer hypotheses: −1.18 Elo over 47,680 games and −0.96 Elo over 54,048 games. Their intervals include zero; neither establishes a gain or advances to LTC. All four game-tested candidates are now set aside. The next ranked idea, correction-direction conflict in late-move reductions, is undergoing instrumentation before any production trial. The [experiment ledger](EXPERIMENTS.md) records exact conditions and preserved API evidence.
 
 ## What was researched
 
@@ -30,8 +30,8 @@ The ranking reflects mechanisms and testing cost, not measured Elo. Related hist
 | Branch on personal fork | Commit | Bench | Status |
 |---|---|---:|---|
 | [codex/correction-bound](https://github.com/arcrystal/Stockfish/tree/codex/correction-bound) | `685e5a03` | 1283493 | Local 1,000 games: +1.39 ±11.80 Elo, inconclusive; Fishtest STC rejected |
-| [codex/tt-bound](https://github.com/arcrystal/Stockfish/tree/codex/tt-bound) | `144dff77` | 1485122 | Local 1,000 games: −1.04 ±11.21 Elo, inconclusive; Fishtest pending |
-| [codex/queen-escape](https://github.com/arcrystal/Stockfish/tree/codex/queen-escape) | `442230b9` | 1281886 | Local 1,000 games: +1.74 ±11.70 Elo, inconclusive; Fishtest pending |
+| [codex/tt-bound](https://github.com/arcrystal/Stockfish/tree/codex/tt-bound) | `144dff77` | 1485122 | Local 1,000 games: −1.04 ±11.21 Elo, inconclusive; Fishtest STC rejected |
+| [codex/queen-escape](https://github.com/arcrystal/Stockfish/tree/codex/queen-escape) | `442230b9` | 1281886 | Local 1,000 games: +1.74 ±11.70 Elo, inconclusive; Fishtest STC rejected |
 | [codex/nnue-chains](https://github.com/arcrystal/Stockfish/tree/codex/nnue-chains) | `4d8dd713` | 1648567 | Exact outputs; speedup −1.15%, interval [−2.35%, +0.06%]; set aside |
 | [codex/repetition-floor](https://github.com/arcrystal/Stockfish/tree/codex/repetition-floor) | `948232b7` | 1586754 | Local 1,000 games: +3.13 ±11.93 Elo, inconclusive; Fishtest STC rejected |
 
