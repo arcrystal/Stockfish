@@ -1799,6 +1799,7 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
         moveCount++;
 
         // Step 6. Pruning
+        bool seePassed = false;
         if (!is_loss(bestValue))
         {
             // Futility pruning and moveCount pruning
@@ -1824,6 +1825,9 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
                     bestValue = std::max(bestValue, std::min(alpha, futilityBase));
                     continue;
                 }
+
+                // A pass at a stricter threshold also proves the later SEE test.
+                seePassed = alpha - futilityBase >= -74;
             }
 
             // Skip non-captures
@@ -1831,7 +1835,7 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
                 continue;
 
             // Do not search moves with bad enough SEE values
-            if (!pos.see_ge(move, -74))
+            if (!seePassed && !pos.see_ge(move, -74))
                 continue;
         }
 
