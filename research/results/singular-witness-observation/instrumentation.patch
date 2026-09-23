@@ -1,0 +1,166 @@
+diff --git a/src/movepick.cpp b/src/movepick.cpp
+index ff99df13..5b4e2000 100644
+--- a/src/movepick.cpp
++++ b/src/movepick.cpp
+@@ -326,6 +326,20 @@ top:
+             endCur = endGenerated = score<QUIETS>(ml);
+ 
+             partial_insertion_sort(cur, endCur, -3560 * depth);
++            if (observedQuiet)
++            {
++                observedGenerated = true;
++                int rank = 0;
++                for (auto* p = cur; p < endCur; ++p)
++                {
++                    if (*p != ttMove && p->value > goodQuietThreshold) ++rank;
++                    if (*p == observedQuiet)
++                    {
++                        observedScore = p->value;
++                        observedRank = p->value > goodQuietThreshold ? rank : 0;
++                    }
++                }
++            }
+         }
+ 
+         ++stage;
+diff --git a/src/movepick.h b/src/movepick.h
+index 34c9fb30..87a0adad 100644
+--- a/src/movepick.h
++++ b/src/movepick.h
+@@ -50,6 +50,10 @@ class MovePicker {
+     MovePicker(const Position&, Move, int, const CapturePieceToHistory*);
+     Move next_move();
+     void skip_quiet_moves();
++    void observe_quiet(Move m) { observedQuiet = m; }
++    int observed_rank() const { return observedRank; }
++    int observed_score() const { return observedScore; }
++    bool observed_generated() const { return observedGenerated; }
+ 
+    private:
+     template<typename Pred>
+@@ -70,6 +74,9 @@ class MovePicker {
+     Depth                        depth;
+     int                          ply;
+     bool                         skipQuiets = false;
++    Move observedQuiet = Move::none();
++    int observedRank = -1, observedScore = 0;
++    bool observedGenerated = false;
+     ExtMove                      moves[MAX_MOVES];
+ };
+ 
+diff --git a/src/search.cpp b/src/search.cpp
+index 842fd157..6804e7d1 100644
+--- a/src/search.cpp
++++ b/src/search.cpp
+@@ -17,6 +17,7 @@
+ */
+ 
+ #include "search.h"
++#include <cstdio>
+ 
+ #include <algorithm>
+ #include <array>
+@@ -1126,6 +1127,26 @@ moves_loop:  // When in check, search starts here
+     MovePicker mp(pos, ttData.move, depth, &mainHistory, &lowPlyHistory, &captureHistory, contHist,
+                   &sharedHistory, ss->ply);
+ 
++    struct Observation {
++        MovePicker& mp;
++        bool record=false, eligible=false, seen=false, searched=false;
++        int depth=0, alpha=0, beta=0, tt=0, sb=0, sv=0, witness=0;
++        int capture=0, check=0, ttResult=VALUE_NONE, value=VALUE_NONE, witnessAlpha=VALUE_NONE;
++        int beforeQuiet=0, beforeCapture=0, finalMove=0;
++        u64 beforeQuietNodes=0, beforeCaptureNodes=0, witnessNodes=0;
++        ~Observation() {
++          if(record) std::fprintf(stderr,
++          "WIT %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %llu %llu %llu %d\n",
++          depth,alpha,beta,tt,sb,sv,witness,capture,check,int(eligible),ttResult,
++          int(mp.observed_generated()),mp.observed_rank(),mp.observed_score(),int(seen),
++          int(searched),witnessAlpha,value,beforeQuiet,beforeCapture,
++          (unsigned long long)beforeQuietNodes,(unsigned long long)beforeCaptureNodes,
++          (unsigned long long)witnessNodes,finalMove);
++        }
++    } observation{mp};
++    observation.depth=depth; observation.alpha=alpha; observation.beta=beta;
++    observation.tt=ttData.value; observation.check=ss->inCheck;
++
+     value = bestValue;
+ 
+     int moveCount = 0;
+@@ -1149,6 +1170,9 @@ moves_loop:  // When in check, search starts here
+         if (rootNode && !std::count(rootMoves.begin() + pvIdx, rootMoves.begin() + pvLast, move))
+             continue;
+ 
++        if (observation.eligible && move.raw() == observation.witness) {
++            observation.seen=true; observation.witnessAlpha=alpha;
++        }
+         ss->moveCount = ++moveCount;
+ 
+         if (rootNode && is_mainthread() && nodes > NODES_LIMIT_OUTPUT)
+@@ -1265,9 +1289,17 @@ moves_loop:  // When in check, search starts here
+             Value singularBeta  = ttData.value - (59 + 66 * (ss->ttPv && !PvNode)) * depth / 63;
+             Depth singularDepth = newDepth / 2;
+ 
++            observation.record=true; observation.sb=singularBeta;
++            ss->observedWitness = Move::none();
+             ss->excludedMove = move;
+             value = search<NonPV>(pos, ss, singularBeta - 1, singularBeta, singularDepth, cutNode);
+             ss->excludedMove = Move::none();
++            Move witness = ss->observedWitness;
++            observation.sv=value; observation.witness=witness.raw();
++            observation.capture=witness && pos.capture_stage(witness);
++            observation.eligible = !ss->inCheck && witness && !pos.capture_stage(witness)
++                && witness != ttData.move && value >= singularBeta && value < beta;
++            if (observation.eligible) mp.observe_quiet(witness);
+ 
+             if (value < singularBeta)
+             {
+@@ -1318,6 +1350,9 @@ moves_loop:  // When in check, search starts here
+         }
+ 
+         u64 nodeCount = rootNode ? u64(nodes) : 0;
++        u64 observationNodes = observation.eligible ? u64(nodes) : 0;
++        if (observation.eligible && move.raw() == observation.witness)
++            observation.searched = true;
+ 
+         // Step 17. Make the move
+         do_move(pos, move, st, givesCheck, ss);
+@@ -1440,6 +1475,16 @@ moves_loop:  // When in check, search starts here
+         // Step 21. Undo move
+         undo_move(pos, move);
+ 
++        if (observation.record && move == ttData.move) observation.ttResult=value;
++        if (observation.eligible) {
++            auto cost = u64(nodes) - observationNodes;
++            if (move.raw() == observation.witness) {
++                observation.value=value; observation.witnessNodes=cost;
++            } else if (!observation.seen && move != ttData.move) {
++                if (capture) { ++observation.beforeCapture; observation.beforeCaptureNodes+=cost; }
++                else { ++observation.beforeQuiet; observation.beforeQuietNodes+=cost; }
++            }
++        }
+         assert(value > -VALUE_INFINITE && value < VALUE_INFINITE);
+ 
+         // Step 22. Check for a new best move
+@@ -1631,6 +1676,9 @@ moves_loop:  // When in check, search starts here
+     if (bestValue <= alpha)
+         ss->ttPv = ss->ttPv || (ss - 1)->ttPv;
+ 
++    if (excludedMove && bestMove) ss->observedWitness = bestMove;
++    observation.finalMove = bestMove.raw();
++
+     // Step 24. Write gathered information in transposition table. Note that the
+     // static evaluation is saved as it was before correction history.
+     if (!excludedMove && !(rootNode && pvIdx))
+diff --git a/src/search.h b/src/search.h
+index f2cf78e2..0bc7fc35 100644
+--- a/src/search.h
++++ b/src/search.h
+@@ -120,6 +120,7 @@ struct Stack {
+     int                         ply;
+     Move                        currentMove;
+     Move                        excludedMove;
++    Move                        observedWitness;
+     Value                       staticEval;
+     int                         statScore;
+     int                         moveCount;

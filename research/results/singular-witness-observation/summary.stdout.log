@@ -1,0 +1,74 @@
+{
+  "nodes": 1704360,
+  "singular_attempts": 38227,
+  "concrete_witness": 19824,
+  "multi_cut_result": 15524,
+  "eligible": 6081,
+  "eligible_tt_cuts": 5356,
+  "quiet_generated": 724,
+  "generated_bad_quiet": 2,
+  "generated_rank1": 615,
+  "generated_rank_gt1": 107,
+  "rank_gt1_positions": 41,
+  "rank_gt1_seen": 93,
+  "rank_gt1_searched": 93,
+  "rank_gt1_pruned": 0,
+  "rank_gt1_unreached": 14,
+  "rank_gt1_alpha_improvements": 23,
+  "rank_gt1_beta_cutoffs": 23,
+  "rank_gt1_final_best": 23,
+  "rank_gt1_prior_quiet_nodes": 8056,
+  "rank_gt1_prior_capture_nodes": 236,
+  "rank_gt1_witness_nodes": 6315,
+  "rank_histogram": {
+    "0": 2,
+    "1": 615,
+    "2": 82,
+    "3": 19,
+    "4": 3,
+    "5": 2,
+    "7": 1
+  },
+  "funnel": {
+    "eligible": 6081,
+    "singular_fail_low": 15615,
+    "multi_cut": 15524,
+    "capture_witness": 692,
+    "no_concrete_witness": 215,
+    "in_check": 100
+  },
+  "outcome_costs": {
+    "cutoff": {
+      "count": 23,
+      "prior_quiet_nodes": 231,
+      "witness_nodes": 1167,
+      "other_final_best": 0
+    },
+    "failed": {
+      "count": 70,
+      "prior_quiet_nodes": 1356,
+      "witness_nodes": 5148,
+      "other_final_best": 10
+    },
+    "unreached": {
+      "count": 14,
+      "prior_quiet_nodes": 6469,
+      "witness_nodes": 0,
+      "other_final_best": 14
+    }
+  },
+  "split": {
+    "first32": {
+      "interventions": 56,
+      "searched": 50,
+      "alpha_improvement": 15,
+      "beta_cutoff": 15
+    },
+    "last32": {
+      "interventions": 51,
+      "searched": 43,
+      "alpha_improvement": 8,
+      "beta_cutoff": 8
+    }
+  }
+}

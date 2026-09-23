@@ -1,0 +1,18 @@
+Stockfish dev-20260913-m-031dfeb4 by the Stockfish developers (see AUTHORS file)
+info string Using 1 thread
+info string NNUE evaluation using nn-134a887f4c8f.nnue (109MiB, (86896, 1024, 32, 32, 1))
+info string Network replica 1: Shared memory.
+info depth 1 seldepth 5 multipv 1 score cp -57 nodes 48 nps 48000 hashfull 0 tbhits 0 time 1 pv a6c7
+info depth 2 seldepth 3 multipv 1 score cp -41 nodes 92 nps 92000 hashfull 0 tbhits 0 time 1 pv a6c7
+info depth 3 seldepth 3 multipv 1 score cp -36 nodes 138 nps 138000 hashfull 0 tbhits 0 time 1 pv a6c7
+info depth 4 seldepth 7 multipv 1 score cp -122 nodes 1546 nps 1546000 hashfull 0 tbhits 0 time 1 pv a6c7 d3d4 a7a5
+info depth 5 seldepth 6 multipv 1 score cp -119 nodes 2188 nps 2188000 hashfull 0 tbhits 0 time 1 pv b7b5 d3d4 b5b4 a3b4 a6b4
+info depth 6 seldepth 7 multipv 1 score cp -111 nodes 2282 nps 1141000 hashfull 0 tbhits 0 time 2 pv b7b5 d3d4 b5b4 a3b4 a6b4 b2b3
+info depth 7 seldepth 11 multipv 1 score cp -118 nodes 2372 nps 1186000 hashfull 0 tbhits 0 time 2 pv b7b5 d3d4 b5b4 a3b4 a6b4 b2b3 a7a5
+info depth 8 seldepth 15 multipv 1 score cp -120 nodes 3855 nps 963750 hashfull 1 tbhits 0 time 4 pv b7b5 d3d4 e8g8 h2h4 b5b4 a3b4 a6b4 c3a4
+info depth 9 seldepth 9 multipv 1 score cp -120 nodes 3928 nps 982000 hashfull 1 tbhits 0 time 4 pv b7b5 d3d4 e8g8 h2h4 b5b4 a3b4 a6b4 c3a4
+info depth 10 seldepth 13 multipv 1 score cp -116 nodes 4130 nps 1032500 hashfull 1 tbhits 0 time 4 pv b7b5 d3d4 e8g8 h2h4 b5b4 a3b4 a6b4 c3a4 c8a6 c2c3 a6f1 e1f1
+info depth 11 seldepth 21 multipv 1 score cp -111 nodes 11517 nps 822642 hashfull 4 tbhits 0 time 14 pv e8g8 d3d4 f7f6 f1d3 c6c5 h2h4 c5d4 e3d4 f6e5 f4e5
+info depth 12 seldepth 17 multipv 1 score cp -110 nodes 19780 nps 760769 hashfull 7 tbhits 0 time 26 pv e8g8 d3d4 f7f6 h2h4 c6c5 d1d2 c5d4 e3d4 a6b8 e1c1 f6e5
+info depth 13 seldepth 18 multipv 1 score cp -107 nodes 27808 nps 772444 hashfull 9 tbhits 0 time 36 pv e8g8 d3d4 c6c5 h2h4 f7f6 d1d2 c5d4 e3d4 a6b8 e1c1 f6e5
+bestmove e8g8 ponder d3d4

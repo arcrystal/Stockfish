@@ -1,0 +1,14 @@
+{
+  "qnodes": 481863,
+  "first_calls": 140035,
+  "first_passes": 49519,
+  "final_calls": 213141,
+  "eligible": 15219,
+  "violations": 0,
+  "other_attack_entries": 1616142,
+  "noneligible_final_attack_entries": 94236,
+  "eligible_final_attack_entries": 4190,
+  "other_loop_iterations": 2406159,
+  "noneligible_final_loop_iterations": 130350,
+  "eligible_final_loop_iterations": 5578
+}

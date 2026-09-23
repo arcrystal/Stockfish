@@ -1,0 +1,264 @@
+{
+  "source_corpus": "../lmr-observation/corpus.json",
+  "binary_sha256": "6edc6f19ab73977e3ca338db62fd7c48c280f7505b28577c9c760582967c3ee5",
+  "started_utc": "2026-09-20T21:30:46.711463+00:00",
+  "comparisons": [
+    {
+      "position": 0,
+      "identical_search": true
+    },
+    {
+      "position": 1,
+      "identical_search": true
+    },
+    {
+      "position": 2,
+      "identical_search": true
+    },
+    {
+      "position": 3,
+      "identical_search": true
+    },
+    {
+      "position": 4,
+      "identical_search": true
+    },
+    {
+      "position": 5,
+      "identical_search": true
+    },
+    {
+      "position": 6,
+      "identical_search": true
+    },
+    {
+      "position": 7,
+      "identical_search": true
+    },
+    {
+      "position": 8,
+      "identical_search": true
+    },
+    {
+      "position": 9,
+      "identical_search": true
+    },
+    {
+      "position": 10,
+      "identical_search": true
+    },
+    {
+      "position": 11,
+      "identical_search": true
+    },
+    {
+      "position": 12,
+      "identical_search": true
+    },
+    {
+      "position": 13,
+      "identical_search": true
+    },
+    {
+      "position": 14,
+      "identical_search": true
+    },
+    {
+      "position": 15,
+      "identical_search": true
+    },
+    {
+      "position": 16,
+      "identical_search": true
+    },
+    {
+      "position": 17,
+      "identical_search": true
+    },
+    {
+      "position": 18,
+      "identical_search": true
+    },
+    {
+      "position": 19,
+      "identical_search": true
+    },
+    {
+      "position": 20,
+      "identical_search": true
+    },
+    {
+      "position": 21,
+      "identical_search": true
+    },
+    {
+      "position": 22,
+      "identical_search": true
+    },
+    {
+      "position": 23,
+      "identical_search": true
+    },
+    {
+      "position": 24,
+      "identical_search": true
+    },
+    {
+      "position": 25,
+      "identical_search": true
+    },
+    {
+      "position": 26,
+      "identical_search": true
+    },
+    {
+      "position": 27,
+      "identical_search": true
+    },
+    {
+      "position": 28,
+      "identical_search": true
+    },
+    {
+      "position": 29,
+      "identical_search": true
+    },
+    {
+      "position": 30,
+      "identical_search": true
+    },
+    {
+      "position": 31,
+      "identical_search": true
+    },
+    {
+      "position": 32,
+      "identical_search": true
+    },
+    {
+      "position": 33,
+      "identical_search": true
+    },
+    {
+      "position": 34,
+      "identical_search": true
+    },
+    {
+      "position": 35,
+      "identical_search": true
+    },
+    {
+      "position": 36,
+      "identical_search": true
+    },
+    {
+      "position": 37,
+      "identical_search": true
+    },
+    {
+      "position": 38,
+      "identical_search": true
+    },
+    {
+      "position": 39,
+      "identical_search": true
+    },
+    {
+      "position": 40,
+      "identical_search": true
+    },
+    {
+      "position": 41,
+      "identical_search": true
+    },
+    {
+      "position": 42,
+      "identical_search": true
+    },
+    {
+      "position": 43,
+      "identical_search": true
+    },
+    {
+      "position": 44,
+      "identical_search": true
+    },
+    {
+      "position": 45,
+      "identical_search": true
+    },
+    {
+      "position": 46,
+      "identical_search": true
+    },
+    {
+      "position": 47,
+      "identical_search": true
+    },
+    {
+      "position": 48,
+      "identical_search": true
+    },
+    {
+      "position": 49,
+      "identical_search": true
+    },
+    {
+      "position": 50,
+      "identical_search": true
+    },
+    {
+      "position": 51,
+      "identical_search": true
+    },
+    {
+      "position": 52,
+      "identical_search": true
+    },
+    {
+      "position": 53,
+      "identical_search": true
+    },
+    {
+      "position": 54,
+      "identical_search": true
+    },
+    {
+      "position": 55,
+      "identical_search": true
+    },
+    {
+      "position": 56,
+      "identical_search": true
+    },
+    {
+      "position": 57,
+      "identical_search": true
+    },
+    {
+      "position": 58,
+      "identical_search": true
+    },
+    {
+      "position": 59,
+      "identical_search": true
+    },
+    {
+      "position": 60,
+      "identical_search": true
+    },
+    {
+      "position": 61,
+      "identical_search": true
+    },
+    {
+      "position": 62,
+      "identical_search": true
+    },
+    {
+      "position": 63,
+      "identical_search": true
+    }
+  ],
+  "finished_utc": "2026-09-20T21:31:02.738905+00:00"
+}

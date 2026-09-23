@@ -1,0 +1,48 @@
+{
+  "first32": {
+    "groups": {
+      "nonpositive_stat/nonpositive_pawn": [
+        4193,
+        3082
+      ],
+      "nonpositive_stat/positive_pawn": [
+        863,
+        623
+      ],
+      "positive_stat/nonpositive_pawn": [
+        3177,
+        2582
+      ],
+      "positive_stat/positive_pawn": [
+        1897,
+        1614
+      ]
+    },
+    "matched_strata": 56,
+    "matched_min_count": 1635,
+    "weighted_survival_difference_positive_pawn": 0.024451233991479335
+  },
+  "last32": {
+    "groups": {
+      "positive_stat/nonpositive_pawn": [
+        2702,
+        2244
+      ],
+      "nonpositive_stat/nonpositive_pawn": [
+        3947,
+        2930
+      ],
+      "positive_stat/positive_pawn": [
+        1850,
+        1606
+      ],
+      "nonpositive_stat/positive_pawn": [
+        797,
+        605
+      ]
+    },
+    "matched_strata": 57,
+    "matched_min_count": 1553,
+    "weighted_survival_difference_positive_pawn": 0.018339210752192175
+  }
+}

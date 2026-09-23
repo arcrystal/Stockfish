@@ -1,0 +1,44 @@
+Stockfish dev-20260913-031dfeb4 by the Stockfish developers (see AUTHORS file)
+id name Stockfish dev-20260913-031dfeb4
+id author the Stockfish developers (see AUTHORS file)
+
+option name Debug Log File type string default <empty>
+option name NumaPolicy type string default auto
+option name Threads type spin default 1 min 1 max 1024
+option name Hash type spin default 16 min 1 max 33554432
+option name Clear Hash type button
+option name Ponder type check default false
+option name MultiPV type spin default 1 min 1 max 256
+option name Skill Level type spin default 20 min 0 max 20
+option name Move Overhead type spin default 10 min 0 max 5000
+option name nodestime type spin default 0 min 0 max 10000
+option name UCI_Chess960 type check default false
+option name UCI_LimitStrength type check default false
+option name UCI_Elo type spin default 1320 min 1320 max 3190
+option name UCI_ShowWDL type check default false
+option name SyzygyPath type string default <empty>
+option name SyzygyProbeDepth type spin default 1 min 1 max 100
+option name Syzygy50MoveRule type check default true
+option name SyzygyProbeLimit type spin default 7 min 0 max 7
+option name EvalFile type string default nn-134a887f4c8f.nnue
+uciok
+info string Using 1 thread
+readyok
+info string Available processors: 0-9
+info string Using 1 thread
+info string NNUE evaluation using nn-134a887f4c8f.nnue (109MiB, (86896, 1024, 32, 32, 1))
+info string Network replica 1: Shared memory.
+info depth 1 seldepth 3 multipv 1 score cp 90 nodes 47 nps 47000 hashfull 0 tbhits 0 time 1 pv h5h4
+info depth 2 seldepth 3 multipv 1 score cp 120 nodes 93 nps 93000 hashfull 0 tbhits 0 time 1 pv h5h4
+info depth 3 seldepth 2 multipv 1 score cp 120 nodes 132 nps 132000 hashfull 0 tbhits 0 time 1 pv h5h4
+info depth 4 seldepth 11 multipv 1 score cp 47 nodes 786 nps 786000 hashfull 0 tbhits 0 time 1 pv h5h4 d7g4 h4g4 c8g4
+info depth 5 seldepth 7 multipv 1 score cp 35 nodes 1169 nps 1169000 hashfull 0 tbhits 0 time 1 pv h5h4 d7g4 h4g4 c8g4 b1c3
+info depth 6 seldepth 7 multipv 1 score cp 57 nodes 1434 nps 1434000 hashfull 0 tbhits 0 time 1 pv h5h4 d7g4 h4g4 c8g4
+info depth 7 seldepth 7 multipv 1 score cp 60 nodes 1563 nps 1563000 hashfull 0 tbhits 0 time 1 pv h5h4 d7g4 h4g4 c8g4
+info depth 8 seldepth 9 multipv 1 score cp 77 nodes 1780 nps 1780000 hashfull 0 tbhits 0 time 1 pv h5h4 b7b5
+info depth 9 seldepth 9 multipv 1 score cp 71 nodes 2107 nps 1053500 hashfull 0 tbhits 0 time 2 pv h5h4 d7g4 h4g4 c8g4 b1c3 f8e7 c3d5
+info depth 10 seldepth 11 multipv 1 score cp 91 nodes 4109 nps 1027250 hashfull 0 tbhits 0 time 4 pv h5h4 d7g4 h4g4 c8g4 b1c3 c7c6
+info depth 11 seldepth 11 multipv 1 score cp 99 nodes 4940 nps 1235000 hashfull 0 tbhits 0 time 4 pv h5h4 b7b5
+info depth 12 seldepth 12 multipv 1 score cp 97 nodes 5233 nps 1046600 hashfull 0 tbhits 0 time 5 pv h5h4 d7g4 h4g4 c8g4 b1c3 c7c6 d2d3 f7f6 g5e6 g4e6 c4e6
+info depth 13 seldepth 16 multipv 1 score cp 101 nodes 9535 nps 1059444 hashfull 2 tbhits 0 time 9 pv h5h4 d7g4 h4g4 c8g4 b1c3 c7c6 d2d3 b8d7 h2h3 f7f6 h3g4 f6g5
+bestmove h5h4 ponder d7g4

@@ -1,0 +1,1165 @@
+{
+  "started_utc": "2026-09-20T21:32:55.497827+00:00",
+  "source_corpus": "research/results/lmr-observation/corpus.json",
+  "source_corpus_sha256": "8eef07cab973e657f54c97108eea75143f4d001d6ed1e3d5677655d3f5de3ec4",
+  "baseline_sha256": "3bc6989c07a680e8478a997b5fcafb877724ac4909509341d1b0d373e7eb6083",
+  "diagnostic_sha256": "29c66881eebb6cc6fb7921ba495a1e98f5c631004ca147ed65982a17329049d8",
+  "depth": 13,
+  "hash_mb": 16,
+  "threads": 1,
+  "positions": [
+    {
+      "index": 0,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 3588,
+        "first_calls": 1370,
+        "first_passes": 393,
+        "final_calls": 1395,
+        "eligible": 85,
+        "violations": 0,
+        "other_attack_entries": 13786,
+        "noneligible_final_attack_entries": 608,
+        "eligible_final_attack_entries": 23,
+        "other_loop_iterations": 19434,
+        "noneligible_final_loop_iterations": 836,
+        "eligible_final_loop_iterations": 25
+      }
+    },
+    {
+      "index": 1,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 12485,
+        "first_calls": 4621,
+        "first_passes": 869,
+        "final_calls": 4819,
+        "eligible": 146,
+        "violations": 0,
+        "other_attack_entries": 44681,
+        "noneligible_final_attack_entries": 2059,
+        "eligible_final_attack_entries": 32,
+        "other_loop_iterations": 62637,
+        "noneligible_final_loop_iterations": 2773,
+        "eligible_final_loop_iterations": 45
+      }
+    },
+    {
+      "index": 2,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 2622,
+        "first_calls": 787,
+        "first_passes": 392,
+        "final_calls": 1045,
+        "eligible": 132,
+        "violations": 0,
+        "other_attack_entries": 6523,
+        "noneligible_final_attack_entries": 353,
+        "eligible_final_attack_entries": 25,
+        "other_loop_iterations": 8438,
+        "noneligible_final_loop_iterations": 390,
+        "eligible_final_loop_iterations": 31
+      }
+    },
+    {
+      "index": 3,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 8399,
+        "first_calls": 1776,
+        "first_passes": 674,
+        "final_calls": 5402,
+        "eligible": 212,
+        "violations": 0,
+        "other_attack_entries": 32045,
+        "noneligible_final_attack_entries": 3377,
+        "eligible_final_attack_entries": 54,
+        "other_loop_iterations": 49255,
+        "noneligible_final_loop_iterations": 5642,
+        "eligible_final_loop_iterations": 60
+      }
+    },
+    {
+      "index": 4,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 5057,
+        "first_calls": 1849,
+        "first_passes": 687,
+        "final_calls": 2388,
+        "eligible": 180,
+        "violations": 0,
+        "other_attack_entries": 13920,
+        "noneligible_final_attack_entries": 972,
+        "eligible_final_attack_entries": 37,
+        "other_loop_iterations": 20255,
+        "noneligible_final_loop_iterations": 1280,
+        "eligible_final_loop_iterations": 53
+      }
+    },
+    {
+      "index": 5,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 16631,
+        "first_calls": 5621,
+        "first_passes": 2121,
+        "final_calls": 7033,
+        "eligible": 600,
+        "violations": 0,
+        "other_attack_entries": 46776,
+        "noneligible_final_attack_entries": 2791,
+        "eligible_final_attack_entries": 175,
+        "other_loop_iterations": 74112,
+        "noneligible_final_loop_iterations": 3495,
+        "eligible_final_loop_iterations": 226
+      }
+    },
+    {
+      "index": 6,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 3807,
+        "first_calls": 1115,
+        "first_passes": 420,
+        "final_calls": 1661,
+        "eligible": 109,
+        "violations": 0,
+        "other_attack_entries": 11694,
+        "noneligible_final_attack_entries": 721,
+        "eligible_final_attack_entries": 23,
+        "other_loop_iterations": 16509,
+        "noneligible_final_loop_iterations": 886,
+        "eligible_final_loop_iterations": 32
+      }
+    },
+    {
+      "index": 7,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 11068,
+        "first_calls": 3784,
+        "first_passes": 948,
+        "final_calls": 5390,
+        "eligible": 234,
+        "violations": 0,
+        "other_attack_entries": 44859,
+        "noneligible_final_attack_entries": 2910,
+        "eligible_final_attack_entries": 78,
+        "other_loop_iterations": 63444,
+        "noneligible_final_loop_iterations": 3834,
+        "eligible_final_loop_iterations": 113
+      }
+    },
+    {
+      "index": 8,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 17216,
+        "first_calls": 5280,
+        "first_passes": 2185,
+        "final_calls": 8258,
+        "eligible": 591,
+        "violations": 0,
+        "other_attack_entries": 53644,
+        "noneligible_final_attack_entries": 2949,
+        "eligible_final_attack_entries": 171,
+        "other_loop_iterations": 83834,
+        "noneligible_final_loop_iterations": 4265,
+        "eligible_final_loop_iterations": 234
+      }
+    },
+    {
+      "index": 9,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 5426,
+        "first_calls": 1363,
+        "first_passes": 463,
+        "final_calls": 2575,
+        "eligible": 105,
+        "violations": 0,
+        "other_attack_entries": 15001,
+        "noneligible_final_attack_entries": 1131,
+        "eligible_final_attack_entries": 19,
+        "other_loop_iterations": 26114,
+        "noneligible_final_loop_iterations": 1406,
+        "eligible_final_loop_iterations": 36
+      }
+    },
+    {
+      "index": 10,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 8649,
+        "first_calls": 2867,
+        "first_passes": 681,
+        "final_calls": 3422,
+        "eligible": 158,
+        "violations": 0,
+        "other_attack_entries": 36170,
+        "noneligible_final_attack_entries": 1683,
+        "eligible_final_attack_entries": 54,
+        "other_loop_iterations": 48366,
+        "noneligible_final_loop_iterations": 2669,
+        "eligible_final_loop_iterations": 114
+      }
+    },
+    {
+      "index": 11,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 6663,
+        "first_calls": 1626,
+        "first_passes": 375,
+        "final_calls": 2795,
+        "eligible": 113,
+        "violations": 0,
+        "other_attack_entries": 18872,
+        "noneligible_final_attack_entries": 1204,
+        "eligible_final_attack_entries": 20,
+        "other_loop_iterations": 30825,
+        "noneligible_final_loop_iterations": 1695,
+        "eligible_final_loop_iterations": 30
+      }
+    },
+    {
+      "index": 12,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 9540,
+        "first_calls": 2772,
+        "first_passes": 1143,
+        "final_calls": 4363,
+        "eligible": 355,
+        "violations": 0,
+        "other_attack_entries": 27525,
+        "noneligible_final_attack_entries": 1320,
+        "eligible_final_attack_entries": 114,
+        "other_loop_iterations": 43024,
+        "noneligible_final_loop_iterations": 1888,
+        "eligible_final_loop_iterations": 184
+      }
+    },
+    {
+      "index": 13,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 14792,
+        "first_calls": 4924,
+        "first_passes": 2064,
+        "final_calls": 6839,
+        "eligible": 782,
+        "violations": 0,
+        "other_attack_entries": 43105,
+        "noneligible_final_attack_entries": 2566,
+        "eligible_final_attack_entries": 256,
+        "other_loop_iterations": 65986,
+        "noneligible_final_loop_iterations": 3532,
+        "eligible_final_loop_iterations": 312
+      }
+    },
+    {
+      "index": 14,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 10895,
+        "first_calls": 2198,
+        "first_passes": 648,
+        "final_calls": 3804,
+        "eligible": 186,
+        "violations": 0,
+        "other_attack_entries": 47331,
+        "noneligible_final_attack_entries": 1944,
+        "eligible_final_attack_entries": 50,
+        "other_loop_iterations": 64064,
+        "noneligible_final_loop_iterations": 2303,
+        "eligible_final_loop_iterations": 55
+      }
+    },
+    {
+      "index": 15,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 9110,
+        "first_calls": 3090,
+        "first_passes": 1050,
+        "final_calls": 4523,
+        "eligible": 345,
+        "violations": 0,
+        "other_attack_entries": 33694,
+        "noneligible_final_attack_entries": 2249,
+        "eligible_final_attack_entries": 130,
+        "other_loop_iterations": 50838,
+        "noneligible_final_loop_iterations": 3437,
+        "eligible_final_loop_iterations": 182
+      }
+    },
+    {
+      "index": 16,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 8057,
+        "first_calls": 2038,
+        "first_passes": 823,
+        "final_calls": 3101,
+        "eligible": 236,
+        "violations": 0,
+        "other_attack_entries": 29520,
+        "noneligible_final_attack_entries": 1421,
+        "eligible_final_attack_entries": 32,
+        "other_loop_iterations": 41725,
+        "noneligible_final_loop_iterations": 1671,
+        "eligible_final_loop_iterations": 39
+      }
+    },
+    {
+      "index": 17,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 1492,
+        "first_calls": 307,
+        "first_passes": 62,
+        "final_calls": 411,
+        "eligible": 13,
+        "violations": 0,
+        "other_attack_entries": 8647,
+        "noneligible_final_attack_entries": 309,
+        "eligible_final_attack_entries": 6,
+        "other_loop_iterations": 11612,
+        "noneligible_final_loop_iterations": 362,
+        "eligible_final_loop_iterations": 7
+      }
+    },
+    {
+      "index": 18,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 4191,
+        "first_calls": 1300,
+        "first_passes": 617,
+        "final_calls": 2118,
+        "eligible": 214,
+        "violations": 0,
+        "other_attack_entries": 10103,
+        "noneligible_final_attack_entries": 800,
+        "eligible_final_attack_entries": 83,
+        "other_loop_iterations": 14528,
+        "noneligible_final_loop_iterations": 1013,
+        "eligible_final_loop_iterations": 98
+      }
+    },
+    {
+      "index": 19,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 2197,
+        "first_calls": 364,
+        "first_passes": 197,
+        "final_calls": 624,
+        "eligible": 45,
+        "violations": 0,
+        "other_attack_entries": 5251,
+        "noneligible_final_attack_entries": 282,
+        "eligible_final_attack_entries": 20,
+        "other_loop_iterations": 7288,
+        "noneligible_final_loop_iterations": 354,
+        "eligible_final_loop_iterations": 20
+      }
+    },
+    {
+      "index": 20,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 5070,
+        "first_calls": 1543,
+        "first_passes": 330,
+        "final_calls": 1669,
+        "eligible": 54,
+        "violations": 0,
+        "other_attack_entries": 20700,
+        "noneligible_final_attack_entries": 859,
+        "eligible_final_attack_entries": 11,
+        "other_loop_iterations": 28509,
+        "noneligible_final_loop_iterations": 1128,
+        "eligible_final_loop_iterations": 18
+      }
+    },
+    {
+      "index": 21,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 1925,
+        "first_calls": 444,
+        "first_passes": 138,
+        "final_calls": 505,
+        "eligible": 32,
+        "violations": 0,
+        "other_attack_entries": 8548,
+        "noneligible_final_attack_entries": 210,
+        "eligible_final_attack_entries": 7,
+        "other_loop_iterations": 12020,
+        "noneligible_final_loop_iterations": 291,
+        "eligible_final_loop_iterations": 15
+      }
+    },
+    {
+      "index": 22,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 3626,
+        "first_calls": 1389,
+        "first_passes": 369,
+        "final_calls": 1170,
+        "eligible": 112,
+        "violations": 0,
+        "other_attack_entries": 12862,
+        "noneligible_final_attack_entries": 544,
+        "eligible_final_attack_entries": 37,
+        "other_loop_iterations": 17019,
+        "noneligible_final_loop_iterations": 579,
+        "eligible_final_loop_iterations": 38
+      }
+    },
+    {
+      "index": 23,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 6436,
+        "first_calls": 2743,
+        "first_passes": 782,
+        "final_calls": 2946,
+        "eligible": 140,
+        "violations": 0,
+        "other_attack_entries": 18736,
+        "noneligible_final_attack_entries": 869,
+        "eligible_final_attack_entries": 26,
+        "other_loop_iterations": 30074,
+        "noneligible_final_loop_iterations": 1432,
+        "eligible_final_loop_iterations": 51
+      }
+    },
+    {
+      "index": 24,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 7266,
+        "first_calls": 2214,
+        "first_passes": 838,
+        "final_calls": 2395,
+        "eligible": 115,
+        "violations": 0,
+        "other_attack_entries": 24029,
+        "noneligible_final_attack_entries": 924,
+        "eligible_final_attack_entries": 50,
+        "other_loop_iterations": 33518,
+        "noneligible_final_loop_iterations": 1139,
+        "eligible_final_loop_iterations": 69
+      }
+    },
+    {
+      "index": 25,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 6571,
+        "first_calls": 1627,
+        "first_passes": 668,
+        "final_calls": 3787,
+        "eligible": 307,
+        "violations": 0,
+        "other_attack_entries": 32165,
+        "noneligible_final_attack_entries": 2367,
+        "eligible_final_attack_entries": 80,
+        "other_loop_iterations": 44831,
+        "noneligible_final_loop_iterations": 3420,
+        "eligible_final_loop_iterations": 94
+      }
+    },
+    {
+      "index": 26,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 6133,
+        "first_calls": 1851,
+        "first_passes": 604,
+        "final_calls": 2944,
+        "eligible": 186,
+        "violations": 0,
+        "other_attack_entries": 18825,
+        "noneligible_final_attack_entries": 1245,
+        "eligible_final_attack_entries": 37,
+        "other_loop_iterations": 27578,
+        "noneligible_final_loop_iterations": 1844,
+        "eligible_final_loop_iterations": 48
+      }
+    },
+    {
+      "index": 27,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 7565,
+        "first_calls": 1948,
+        "first_passes": 838,
+        "final_calls": 3716,
+        "eligible": 307,
+        "violations": 0,
+        "other_attack_entries": 21812,
+        "noneligible_final_attack_entries": 1340,
+        "eligible_final_attack_entries": 81,
+        "other_loop_iterations": 38304,
+        "noneligible_final_loop_iterations": 1876,
+        "eligible_final_loop_iterations": 111
+      }
+    },
+    {
+      "index": 28,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 8596,
+        "first_calls": 2768,
+        "first_passes": 989,
+        "final_calls": 4332,
+        "eligible": 207,
+        "violations": 0,
+        "other_attack_entries": 24041,
+        "noneligible_final_attack_entries": 2249,
+        "eligible_final_attack_entries": 42,
+        "other_loop_iterations": 38796,
+        "noneligible_final_loop_iterations": 3328,
+        "eligible_final_loop_iterations": 49
+      }
+    },
+    {
+      "index": 29,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 12131,
+        "first_calls": 3242,
+        "first_passes": 860,
+        "final_calls": 4769,
+        "eligible": 366,
+        "violations": 0,
+        "other_attack_entries": 47152,
+        "noneligible_final_attack_entries": 2654,
+        "eligible_final_attack_entries": 114,
+        "other_loop_iterations": 65886,
+        "noneligible_final_loop_iterations": 3205,
+        "eligible_final_loop_iterations": 121
+      }
+    },
+    {
+      "index": 30,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 7253,
+        "first_calls": 2286,
+        "first_passes": 1028,
+        "final_calls": 3059,
+        "eligible": 316,
+        "violations": 0,
+        "other_attack_entries": 21902,
+        "noneligible_final_attack_entries": 1150,
+        "eligible_final_attack_entries": 103,
+        "other_loop_iterations": 33434,
+        "noneligible_final_loop_iterations": 1533,
+        "eligible_final_loop_iterations": 128
+      }
+    },
+    {
+      "index": 31,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 5977,
+        "first_calls": 1954,
+        "first_passes": 665,
+        "final_calls": 2370,
+        "eligible": 248,
+        "violations": 0,
+        "other_attack_entries": 20353,
+        "noneligible_final_attack_entries": 1037,
+        "eligible_final_attack_entries": 56,
+        "other_loop_iterations": 30033,
+        "noneligible_final_loop_iterations": 1264,
+        "eligible_final_loop_iterations": 83
+      }
+    },
+    {
+      "index": 32,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 19197,
+        "first_calls": 5482,
+        "first_passes": 1927,
+        "final_calls": 8909,
+        "eligible": 666,
+        "violations": 0,
+        "other_attack_entries": 63131,
+        "noneligible_final_attack_entries": 4052,
+        "eligible_final_attack_entries": 178,
+        "other_loop_iterations": 97301,
+        "noneligible_final_loop_iterations": 6163,
+        "eligible_final_loop_iterations": 243
+      }
+    },
+    {
+      "index": 33,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 3567,
+        "first_calls": 1250,
+        "first_passes": 281,
+        "final_calls": 1139,
+        "eligible": 70,
+        "violations": 0,
+        "other_attack_entries": 14372,
+        "noneligible_final_attack_entries": 570,
+        "eligible_final_attack_entries": 18,
+        "other_loop_iterations": 21617,
+        "noneligible_final_loop_iterations": 760,
+        "eligible_final_loop_iterations": 26
+      }
+    },
+    {
+      "index": 34,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 14355,
+        "first_calls": 3160,
+        "first_passes": 1386,
+        "final_calls": 6715,
+        "eligible": 715,
+        "violations": 0,
+        "other_attack_entries": 54807,
+        "noneligible_final_attack_entries": 3319,
+        "eligible_final_attack_entries": 177,
+        "other_loop_iterations": 74965,
+        "noneligible_final_loop_iterations": 4370,
+        "eligible_final_loop_iterations": 213
+      }
+    },
+    {
+      "index": 35,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 4295,
+        "first_calls": 929,
+        "first_passes": 444,
+        "final_calls": 1819,
+        "eligible": 289,
+        "violations": 0,
+        "other_attack_entries": 13571,
+        "noneligible_final_attack_entries": 989,
+        "eligible_final_attack_entries": 83,
+        "other_loop_iterations": 19222,
+        "noneligible_final_loop_iterations": 1156,
+        "eligible_final_loop_iterations": 94
+      }
+    },
+    {
+      "index": 36,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 3635,
+        "first_calls": 901,
+        "first_passes": 300,
+        "final_calls": 1473,
+        "eligible": 106,
+        "violations": 0,
+        "other_attack_entries": 7970,
+        "noneligible_final_attack_entries": 839,
+        "eligible_final_attack_entries": 41,
+        "other_loop_iterations": 15445,
+        "noneligible_final_loop_iterations": 1144,
+        "eligible_final_loop_iterations": 52
+      }
+    },
+    {
+      "index": 37,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 3769,
+        "first_calls": 1187,
+        "first_passes": 469,
+        "final_calls": 1504,
+        "eligible": 108,
+        "violations": 0,
+        "other_attack_entries": 13301,
+        "noneligible_final_attack_entries": 675,
+        "eligible_final_attack_entries": 37,
+        "other_loop_iterations": 19108,
+        "noneligible_final_loop_iterations": 902,
+        "eligible_final_loop_iterations": 43
+      }
+    },
+    {
+      "index": 38,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 2912,
+        "first_calls": 938,
+        "first_passes": 263,
+        "final_calls": 959,
+        "eligible": 66,
+        "violations": 0,
+        "other_attack_entries": 11225,
+        "noneligible_final_attack_entries": 465,
+        "eligible_final_attack_entries": 35,
+        "other_loop_iterations": 17729,
+        "noneligible_final_loop_iterations": 708,
+        "eligible_final_loop_iterations": 61
+      }
+    },
+    {
+      "index": 39,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 9756,
+        "first_calls": 2808,
+        "first_passes": 1053,
+        "final_calls": 4404,
+        "eligible": 333,
+        "violations": 0,
+        "other_attack_entries": 31154,
+        "noneligible_final_attack_entries": 1925,
+        "eligible_final_attack_entries": 92,
+        "other_loop_iterations": 47521,
+        "noneligible_final_loop_iterations": 3123,
+        "eligible_final_loop_iterations": 115
+      }
+    },
+    {
+      "index": 40,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 6874,
+        "first_calls": 1860,
+        "first_passes": 625,
+        "final_calls": 3033,
+        "eligible": 245,
+        "violations": 0,
+        "other_attack_entries": 26649,
+        "noneligible_final_attack_entries": 1548,
+        "eligible_final_attack_entries": 44,
+        "other_loop_iterations": 35545,
+        "noneligible_final_loop_iterations": 1892,
+        "eligible_final_loop_iterations": 77
+      }
+    },
+    {
+      "index": 41,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 4707,
+        "first_calls": 1098,
+        "first_passes": 419,
+        "final_calls": 1793,
+        "eligible": 185,
+        "violations": 0,
+        "other_attack_entries": 19231,
+        "noneligible_final_attack_entries": 815,
+        "eligible_final_attack_entries": 64,
+        "other_loop_iterations": 28092,
+        "noneligible_final_loop_iterations": 1003,
+        "eligible_final_loop_iterations": 76
+      }
+    },
+    {
+      "index": 42,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 4756,
+        "first_calls": 1577,
+        "first_passes": 662,
+        "final_calls": 1749,
+        "eligible": 143,
+        "violations": 0,
+        "other_attack_entries": 16080,
+        "noneligible_final_attack_entries": 673,
+        "eligible_final_attack_entries": 61,
+        "other_loop_iterations": 25487,
+        "noneligible_final_loop_iterations": 978,
+        "eligible_final_loop_iterations": 81
+      }
+    },
+    {
+      "index": 43,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 5641,
+        "first_calls": 1846,
+        "first_passes": 518,
+        "final_calls": 2465,
+        "eligible": 142,
+        "violations": 0,
+        "other_attack_entries": 15610,
+        "noneligible_final_attack_entries": 808,
+        "eligible_final_attack_entries": 38,
+        "other_loop_iterations": 25486,
+        "noneligible_final_loop_iterations": 1043,
+        "eligible_final_loop_iterations": 53
+      }
+    },
+    {
+      "index": 44,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 12603,
+        "first_calls": 3684,
+        "first_passes": 1148,
+        "final_calls": 5062,
+        "eligible": 363,
+        "violations": 0,
+        "other_attack_entries": 45571,
+        "noneligible_final_attack_entries": 2332,
+        "eligible_final_attack_entries": 130,
+        "other_loop_iterations": 65940,
+        "noneligible_final_loop_iterations": 3229,
+        "eligible_final_loop_iterations": 182
+      }
+    },
+    {
+      "index": 45,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 10559,
+        "first_calls": 3159,
+        "first_passes": 965,
+        "final_calls": 3911,
+        "eligible": 387,
+        "violations": 0,
+        "other_attack_entries": 45011,
+        "noneligible_final_attack_entries": 1668,
+        "eligible_final_attack_entries": 114,
+        "other_loop_iterations": 66457,
+        "noneligible_final_loop_iterations": 2115,
+        "eligible_final_loop_iterations": 131
+      }
+    },
+    {
+      "index": 46,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 2204,
+        "first_calls": 658,
+        "first_passes": 153,
+        "final_calls": 740,
+        "eligible": 14,
+        "violations": 0,
+        "other_attack_entries": 8724,
+        "noneligible_final_attack_entries": 371,
+        "eligible_final_attack_entries": 2,
+        "other_loop_iterations": 11267,
+        "noneligible_final_loop_iterations": 425,
+        "eligible_final_loop_iterations": 3
+      }
+    },
+    {
+      "index": 47,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 13592,
+        "first_calls": 3115,
+        "first_passes": 1250,
+        "final_calls": 6694,
+        "eligible": 644,
+        "violations": 0,
+        "other_attack_entries": 47186,
+        "noneligible_final_attack_entries": 3390,
+        "eligible_final_attack_entries": 234,
+        "other_loop_iterations": 66760,
+        "noneligible_final_loop_iterations": 4655,
+        "eligible_final_loop_iterations": 277
+      }
+    },
+    {
+      "index": 48,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 11847,
+        "first_calls": 3400,
+        "first_passes": 1410,
+        "final_calls": 5412,
+        "eligible": 226,
+        "violations": 0,
+        "other_attack_entries": 35164,
+        "noneligible_final_attack_entries": 2064,
+        "eligible_final_attack_entries": 51,
+        "other_loop_iterations": 59488,
+        "noneligible_final_loop_iterations": 3399,
+        "eligible_final_loop_iterations": 72
+      }
+    },
+    {
+      "index": 49,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 2971,
+        "first_calls": 958,
+        "first_passes": 380,
+        "final_calls": 1298,
+        "eligible": 58,
+        "violations": 0,
+        "other_attack_entries": 8007,
+        "noneligible_final_attack_entries": 426,
+        "eligible_final_attack_entries": 12,
+        "other_loop_iterations": 12559,
+        "noneligible_final_loop_iterations": 647,
+        "eligible_final_loop_iterations": 14
+      }
+    },
+    {
+      "index": 50,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 6469,
+        "first_calls": 2241,
+        "first_passes": 702,
+        "final_calls": 2489,
+        "eligible": 200,
+        "violations": 0,
+        "other_attack_entries": 19825,
+        "noneligible_final_attack_entries": 882,
+        "eligible_final_attack_entries": 62,
+        "other_loop_iterations": 29886,
+        "noneligible_final_loop_iterations": 1322,
+        "eligible_final_loop_iterations": 94
+      }
+    },
+    {
+      "index": 51,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 8555,
+        "first_calls": 2783,
+        "first_passes": 929,
+        "final_calls": 3423,
+        "eligible": 204,
+        "violations": 0,
+        "other_attack_entries": 29363,
+        "noneligible_final_attack_entries": 1408,
+        "eligible_final_attack_entries": 54,
+        "other_loop_iterations": 45268,
+        "noneligible_final_loop_iterations": 2033,
+        "eligible_final_loop_iterations": 61
+      }
+    },
+    {
+      "index": 52,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 11584,
+        "first_calls": 2761,
+        "first_passes": 1244,
+        "final_calls": 5551,
+        "eligible": 515,
+        "violations": 0,
+        "other_attack_entries": 42356,
+        "noneligible_final_attack_entries": 2894,
+        "eligible_final_attack_entries": 172,
+        "other_loop_iterations": 66817,
+        "noneligible_final_loop_iterations": 3700,
+        "eligible_final_loop_iterations": 239
+      }
+    },
+    {
+      "index": 53,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 13375,
+        "first_calls": 3735,
+        "first_passes": 1187,
+        "final_calls": 7576,
+        "eligible": 461,
+        "violations": 0,
+        "other_attack_entries": 32648,
+        "noneligible_final_attack_entries": 2860,
+        "eligible_final_attack_entries": 73,
+        "other_loop_iterations": 50688,
+        "noneligible_final_loop_iterations": 4788,
+        "eligible_final_loop_iterations": 124
+      }
+    },
+    {
+      "index": 54,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 4116,
+        "first_calls": 1159,
+        "first_passes": 505,
+        "final_calls": 1809,
+        "eligible": 160,
+        "violations": 0,
+        "other_attack_entries": 12169,
+        "noneligible_final_attack_entries": 662,
+        "eligible_final_attack_entries": 37,
+        "other_loop_iterations": 18707,
+        "noneligible_final_loop_iterations": 996,
+        "eligible_final_loop_iterations": 53
+      }
+    },
+    {
+      "index": 55,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 12600,
+        "first_calls": 2814,
+        "first_passes": 1302,
+        "final_calls": 6486,
+        "eligible": 562,
+        "violations": 0,
+        "other_attack_entries": 40501,
+        "noneligible_final_attack_entries": 2916,
+        "eligible_final_attack_entries": 82,
+        "other_loop_iterations": 61864,
+        "noneligible_final_loop_iterations": 3646,
+        "eligible_final_loop_iterations": 104
+      }
+    },
+    {
+      "index": 56,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 9613,
+        "first_calls": 2777,
+        "first_passes": 1120,
+        "final_calls": 4363,
+        "eligible": 180,
+        "violations": 0,
+        "other_attack_entries": 27205,
+        "noneligible_final_attack_entries": 1288,
+        "eligible_final_attack_entries": 26,
+        "other_loop_iterations": 40454,
+        "noneligible_final_loop_iterations": 1709,
+        "eligible_final_loop_iterations": 39
+      }
+    },
+    {
+      "index": 57,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 2126,
+        "first_calls": 571,
+        "first_passes": 94,
+        "final_calls": 804,
+        "eligible": 14,
+        "violations": 0,
+        "other_attack_entries": 9232,
+        "noneligible_final_attack_entries": 502,
+        "eligible_final_attack_entries": 4,
+        "other_loop_iterations": 11282,
+        "noneligible_final_loop_iterations": 531,
+        "eligible_final_loop_iterations": 4
+      }
+    },
+    {
+      "index": 58,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 4571,
+        "first_calls": 1326,
+        "first_passes": 475,
+        "final_calls": 1664,
+        "eligible": 118,
+        "violations": 0,
+        "other_attack_entries": 15101,
+        "noneligible_final_attack_entries": 623,
+        "eligible_final_attack_entries": 26,
+        "other_loop_iterations": 20915,
+        "noneligible_final_loop_iterations": 896,
+        "eligible_final_loop_iterations": 46
+      }
+    },
+    {
+      "index": 59,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 8515,
+        "first_calls": 2478,
+        "first_passes": 729,
+        "final_calls": 4060,
+        "eligible": 146,
+        "violations": 0,
+        "other_attack_entries": 23971,
+        "noneligible_final_attack_entries": 1916,
+        "eligible_final_attack_entries": 45,
+        "other_loop_iterations": 37621,
+        "noneligible_final_loop_iterations": 2206,
+        "eligible_final_loop_iterations": 50
+      }
+    },
+    {
+      "index": 60,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 8727,
+        "first_calls": 2754,
+        "first_passes": 1300,
+        "final_calls": 4530,
+        "eligible": 245,
+        "violations": 0,
+        "other_attack_entries": 19004,
+        "noneligible_final_attack_entries": 1591,
+        "eligible_final_attack_entries": 42,
+        "other_loop_iterations": 31155,
+        "noneligible_final_loop_iterations": 2267,
+        "eligible_final_loop_iterations": 51
+      }
+    },
+    {
+      "index": 61,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 4857,
+        "first_calls": 1194,
+        "first_passes": 421,
+        "final_calls": 2093,
+        "eligible": 111,
+        "violations": 0,
+        "other_attack_entries": 18565,
+        "noneligible_final_attack_entries": 1030,
+        "eligible_final_attack_entries": 16,
+        "other_loop_iterations": 26237,
+        "noneligible_final_loop_iterations": 1538,
+        "eligible_final_loop_iterations": 27
+      }
+    },
+    {
+      "index": 62,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 4780,
+        "first_calls": 944,
+        "first_passes": 379,
+        "final_calls": 1868,
+        "eligible": 129,
+        "violations": 0,
+        "other_attack_entries": 22362,
+        "noneligible_final_attack_entries": 970,
+        "eligible_final_attack_entries": 46,
+        "other_loop_iterations": 33419,
+        "noneligible_final_loop_iterations": 1362,
+        "eligible_final_loop_iterations": 88
+      }
+    },
+    {
+      "index": 63,
+      "identical_search": true,
+      "counts": {
+        "qnodes": 4301,
+        "first_calls": 1427,
+        "first_passes": 558,
+        "final_calls": 1718,
+        "eligible": 183,
+        "violations": 0,
+        "other_attack_entries": 12804,
+        "noneligible_final_attack_entries": 668,
+        "eligible_final_attack_entries": 48,
+        "other_loop_iterations": 19567,
+        "noneligible_final_loop_iterations": 874,
+        "eligible_final_loop_iterations": 64
+      }
+    }
+  ],
+  "finished_utc": "2026-09-20T21:33:10.253149+00:00"
+}

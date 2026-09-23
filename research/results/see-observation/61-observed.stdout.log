@@ -1,0 +1,18 @@
+Stockfish dev-20260913-m-031dfeb4 by the Stockfish developers (see AUTHORS file)
+info string Using 1 thread
+info string NNUE evaluation using nn-134a887f4c8f.nnue (109MiB, (86896, 1024, 32, 32, 1))
+info string Network replica 1: Shared memory.
+info depth 1 seldepth 6 multipv 1 score cp -77 nodes 84 nps 84000 hashfull 0 tbhits 0 time 1 pv c5a7 f3d4 e5d4
+info depth 2 seldepth 4 multipv 1 score cp -77 nodes 177 nps 177000 hashfull 0 tbhits 0 time 1 pv c5a7 f3d4 e5d4
+info depth 3 seldepth 4 multipv 1 score cp -77 nodes 242 nps 242000 hashfull 0 tbhits 0 time 1 pv c5a7 f3d4 e5d4
+info depth 4 seldepth 5 multipv 1 score cp -58 nodes 322 nps 322000 hashfull 0 tbhits 0 time 1 pv c5a7 f3d4
+info depth 5 seldepth 4 multipv 1 score cp -58 nodes 371 nps 371000 hashfull 0 tbhits 0 time 1 pv c5a7 f3d4 e5d4
+info depth 6 seldepth 6 multipv 1 score cp -74 nodes 838 nps 838000 hashfull 0 tbhits 0 time 1 pv c5a7 f3d4 e5d4 f2f4
+info depth 7 seldepth 9 multipv 1 score cp -65 nodes 1670 nps 835000 hashfull 0 tbhits 0 time 2 pv c5b6 f3d4 b6d4 c2c3
+info depth 8 seldepth 10 multipv 1 score cp -66 nodes 1780 nps 890000 hashfull 0 tbhits 0 time 2 pv c5b6 f3d4 b6d4 b2d4 e5d4
+info depth 9 seldepth 13 multipv 1 score cp -77 nodes 4863 nps 972600 hashfull 1 tbhits 0 time 5 pv c5a7 f3d4 e5d4 b1d2 g8f6 h2h3
+info depth 10 seldepth 18 multipv 1 score cp -79 nodes 8651 nps 961222 hashfull 1 tbhits 0 time 9 pv c5b6 f3d4 b6d4 b2d4 e5d4 d1h5 d8e7 b1d2 g8f6 h5h4 e8g8 f2f4 a6a5
+info depth 11 seldepth 12 multipv 1 score cp -79 nodes 8809 nps 978777 hashfull 1 tbhits 0 time 9 pv c5b6 f3d4 b6d4 b2d4 e5d4 d1h5 d8e7 b1d2 g8f6 h5h4 e8g8
+info depth 12 seldepth 13 multipv 1 score cp -79 nodes 9164 nps 1018222 hashfull 1 tbhits 0 time 9 pv c5b6 f3d4 b6d4 b2d4 e5d4 d1h5 d8e7 b1d2 g8f6 h5h4 e8g8 f2f4
+info depth 13 seldepth 23 multipv 1 score cp -85 nodes 18289 nps 914450 hashfull 4 tbhits 0 time 20 pv c5a7 f3d4 a7d4 b2d4 e5d4 d1h5 d8e7 e4e5 d6e5 f1e1 g7g5 b1d2 g8f6 h5e2 e8g8 e2e5 e7e5 e1e5 f8e8 a1e1 e8e5 e1e5
+bestmove c5a7 ponder f3d4

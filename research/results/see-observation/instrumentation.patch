@@ -1,0 +1,115 @@
+diff --git a/src/position.cpp b/src/position.cpp
+index 51a10b56..2fcdc403 100644
+--- a/src/position.cpp
++++ b/src/position.cpp
+@@ -21,6 +21,7 @@
+ #include <algorithm>
+ #include <array>
+ #include <cassert>
++#include <cstdio>
+ #include <cctype>
+ #include <cstddef>
+ #include <cstring>
+@@ -43,6 +44,14 @@ using std::string;
+ 
+ namespace Stockfish {
+ 
++SeeReuseObservation seeReuseObservation;
++SeeReuseObservation::~SeeReuseObservation() {
++    std::fprintf(stderr, "SEEREUSE,%llu,%llu,%llu,%llu,%llu,%llu,%llu,%llu,%llu,%llu,%llu,%llu\n",
++      qnodes, firstCalls, firstPasses, finalCalls, eligible, violations,
++      attackEntries[0], attackEntries[1], attackEntries[2],
++      loopIterations[0], loopIterations[1], loopIterations[2]);
++}
++
+ using namespace Attacks;
+ 
+ namespace Zobrist {
+@@ -1407,6 +1416,7 @@ bool Position::see_ge(Move m, int threshold) const {
+         return true;
+ 
+     assert(color_of(piece_on(from)) == sideToMove);
++    ++seeReuseObservation.attackEntries[seeReuseObservation.mode];
+     Bitboard occupied  = pieces() ^ from ^ to;  // xoring to is important for pinned piece logic
+     Color    stm       = sideToMove;
+     Bitboard attackers = attackers_to(to, occupied);
+@@ -1415,6 +1425,7 @@ bool Position::see_ge(Move m, int threshold) const {
+ 
+     while (true)
+     {
++        ++seeReuseObservation.loopIterations[seeReuseObservation.mode];
+         stm = ~stm;
+         attackers &= occupied;
+ 
+diff --git a/src/position.h b/src/position.h
+index 04336b37..0ae4723c 100644
+--- a/src/position.h
++++ b/src/position.h
+@@ -35,6 +35,16 @@
+ 
+ namespace Stockfish {
+ 
++// Diagnostic only; run with exactly one search worker. Never changes SEE results.
++struct SeeReuseObservation {
++    unsigned long long qnodes = 0, firstCalls = 0, firstPasses = 0;
++    unsigned long long finalCalls = 0, eligible = 0, violations = 0;
++    unsigned long long attackEntries[3]{}, loopIterations[3]{};
++    int mode = 0; // 0 other SEE, 1 noneligible final SEE, 2 eligible final SEE
++    ~SeeReuseObservation();
++};
++extern SeeReuseObservation seeReuseObservation;
++
+ class TranspositionTable;
+ struct SharedHistories;
+ 
+diff --git a/src/search.cpp b/src/search.cpp
+index 842fd157..09bfc768 100644
+--- a/src/search.cpp
++++ b/src/search.cpp
+@@ -1667,6 +1667,7 @@ moves_loop:  // When in check, search starts here
+ template<NodeType nodeType>
+ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta) {
+ 
++    ++seeReuseObservation.qnodes;
+     static_assert(nodeType != Root);
+     constexpr bool PvNode = nodeType == PV;
+ 
+@@ -1798,6 +1799,8 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
+ 
+         moveCount++;
+ 
++        bool repeatedSeeProved = false;
++
+         // Step 6. Pruning
+         if (!is_loss(bestValue))
+         {
+@@ -1819,11 +1822,14 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
+                 }
+ 
+                 // If static exchange evaluation is low enough, we can prune
++                ++seeReuseObservation.firstCalls;
+                 if (!pos.see_ge(move, alpha - futilityBase))
+                 {
+                     bestValue = std::max(bestValue, std::min(alpha, futilityBase));
+                     continue;
+                 }
++                ++seeReuseObservation.firstPasses;
++                repeatedSeeProved = alpha - futilityBase >= -74;
+             }
+ 
+             // Skip non-captures
+@@ -1831,7 +1837,13 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
+                 continue;
+ 
+             // Do not search moves with bad enough SEE values
+-            if (!pos.see_ge(move, -74))
++            ++seeReuseObservation.finalCalls;
++            seeReuseObservation.eligible += repeatedSeeProved;
++            seeReuseObservation.mode = repeatedSeeProved ? 2 : 1;
++            const bool finalSeePassed = pos.see_ge(move, -74);
++            seeReuseObservation.mode = 0;
++            seeReuseObservation.violations += repeatedSeeProved && !finalSeePassed;
++            if (!finalSeePassed)
+                 continue;
+         }
+ 

@@ -1,0 +1,44 @@
+{
+  "all": {
+    "count": 26746,
+    "verified_above_alpha": 21631,
+    "verification_nodes_inclusive": 415346,
+    "reduced_nodes_inclusive": 176285
+  },
+  "quiet": {
+    "count": 23496,
+    "verified_above_alpha": 18862,
+    "verification_nodes_inclusive": 375228,
+    "reduced_nodes_inclusive": 156243
+  },
+  "capture": {
+    "count": 3250,
+    "verified_above_alpha": 2769,
+    "verification_nodes_inclusive": 40118,
+    "reduced_nodes_inclusive": 20042
+  },
+  "quiet+extension": {
+    "count": 10205,
+    "verified_above_alpha": 8793,
+    "verification_nodes_inclusive": 128433,
+    "reduced_nodes_inclusive": 38167
+  },
+  "quiet+no_extension": {
+    "count": 13291,
+    "verified_above_alpha": 10069,
+    "verification_nodes_inclusive": 246795,
+    "reduced_nodes_inclusive": 118076
+  },
+  "quiet+positive_history": {
+    "count": 11673,
+    "verified_above_alpha": 9876,
+    "verification_nodes_inclusive": 178791,
+    "reduced_nodes_inclusive": 79137
+  },
+  "quiet+negative_history": {
+    "count": 11823,
+    "verified_above_alpha": 8986,
+    "verification_nodes_inclusive": 196437,
+    "reduced_nodes_inclusive": 77106
+  }
+}

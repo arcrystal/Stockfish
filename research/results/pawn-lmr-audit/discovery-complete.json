@@ -1,0 +1,325 @@
+{
+  "finished_utc": "2026-09-23T03:04:23.388583+00:00",
+  "roots": [
+    {
+      "index": 0,
+      "eligible": 4752,
+      "pool": 4685
+    },
+    {
+      "index": 1,
+      "eligible": 2264,
+      "pool": 2219
+    },
+    {
+      "index": 2,
+      "eligible": 9044,
+      "pool": 8865
+    },
+    {
+      "index": 3,
+      "eligible": 14538,
+      "pool": 14349
+    },
+    {
+      "index": 4,
+      "eligible": 3384,
+      "pool": 3311
+    },
+    {
+      "index": 5,
+      "eligible": 3743,
+      "pool": 3693
+    },
+    {
+      "index": 6,
+      "eligible": 3912,
+      "pool": 3844
+    },
+    {
+      "index": 7,
+      "eligible": 726,
+      "pool": 720
+    },
+    {
+      "index": 8,
+      "eligible": 3871,
+      "pool": 3790
+    },
+    {
+      "index": 9,
+      "eligible": 4112,
+      "pool": 4049
+    },
+    {
+      "index": 10,
+      "eligible": 4318,
+      "pool": 4283
+    },
+    {
+      "index": 11,
+      "eligible": 3714,
+      "pool": 3660
+    },
+    {
+      "index": 12,
+      "eligible": 620,
+      "pool": 613
+    },
+    {
+      "index": 13,
+      "eligible": 3749,
+      "pool": 3697
+    },
+    {
+      "index": 14,
+      "eligible": 5526,
+      "pool": 5398
+    },
+    {
+      "index": 15,
+      "eligible": 2554,
+      "pool": 2507
+    },
+    {
+      "index": 16,
+      "eligible": 3409,
+      "pool": 3344
+    },
+    {
+      "index": 17,
+      "eligible": 3402,
+      "pool": 3352
+    },
+    {
+      "index": 18,
+      "eligible": 8060,
+      "pool": 7923
+    },
+    {
+      "index": 19,
+      "eligible": 1563,
+      "pool": 1537
+    },
+    {
+      "index": 20,
+      "eligible": 7184,
+      "pool": 7065
+    },
+    {
+      "index": 21,
+      "eligible": 5258,
+      "pool": 5179
+    },
+    {
+      "index": 22,
+      "eligible": 2128,
+      "pool": 2088
+    },
+    {
+      "index": 23,
+      "eligible": 1137,
+      "pool": 1118
+    },
+    {
+      "index": 24,
+      "eligible": 5268,
+      "pool": 5210
+    },
+    {
+      "index": 25,
+      "eligible": 2369,
+      "pool": 2329
+    },
+    {
+      "index": 26,
+      "eligible": 1975,
+      "pool": 1931
+    },
+    {
+      "index": 27,
+      "eligible": 5679,
+      "pool": 5575
+    },
+    {
+      "index": 28,
+      "eligible": 1434,
+      "pool": 1414
+    },
+    {
+      "index": 29,
+      "eligible": 4969,
+      "pool": 4882
+    },
+    {
+      "index": 30,
+      "eligible": 5924,
+      "pool": 5878
+    },
+    {
+      "index": 31,
+      "eligible": 3030,
+      "pool": 2972
+    },
+    {
+      "index": 32,
+      "eligible": 4164,
+      "pool": 4092
+    },
+    {
+      "index": 33,
+      "eligible": 2522,
+      "pool": 2493
+    },
+    {
+      "index": 34,
+      "eligible": 3112,
+      "pool": 3073
+    },
+    {
+      "index": 35,
+      "eligible": 4496,
+      "pool": 4400
+    },
+    {
+      "index": 36,
+      "eligible": 3343,
+      "pool": 3268
+    },
+    {
+      "index": 37,
+      "eligible": 13844,
+      "pool": 13746
+    },
+    {
+      "index": 38,
+      "eligible": 4926,
+      "pool": 4812
+    },
+    {
+      "index": 39,
+      "eligible": 16019,
+      "pool": 15762
+    },
+    {
+      "index": 40,
+      "eligible": 3095,
+      "pool": 3050
+    },
+    {
+      "index": 41,
+      "eligible": 4894,
+      "pool": 4819
+    },
+    {
+      "index": 42,
+      "eligible": 4084,
+      "pool": 4033
+    },
+    {
+      "index": 43,
+      "eligible": 8487,
+      "pool": 8347
+    },
+    {
+      "index": 44,
+      "eligible": 9113,
+      "pool": 8965
+    },
+    {
+      "index": 45,
+      "eligible": 3487,
+      "pool": 3412
+    },
+    {
+      "index": 46,
+      "eligible": 1820,
+      "pool": 1794
+    },
+    {
+      "index": 47,
+      "eligible": 3966,
+      "pool": 3879
+    },
+    {
+      "index": 48,
+      "eligible": 5505,
+      "pool": 5431
+    },
+    {
+      "index": 49,
+      "eligible": 4692,
+      "pool": 4604
+    },
+    {
+      "index": 50,
+      "eligible": 3938,
+      "pool": 3881
+    },
+    {
+      "index": 51,
+      "eligible": 2513,
+      "pool": 2464
+    },
+    {
+      "index": 52,
+      "eligible": 11850,
+      "pool": 11639
+    },
+    {
+      "index": 53,
+      "eligible": 19461,
+      "pool": 19216
+    },
+    {
+      "index": 54,
+      "eligible": 4283,
+      "pool": 4201
+    },
+    {
+      "index": 55,
+      "eligible": 1089,
+      "pool": 1056
+    },
+    {
+      "index": 56,
+      "eligible": 6752,
+      "pool": 6644
+    },
+    {
+      "index": 57,
+      "eligible": 7639,
+      "pool": 7508
+    },
+    {
+      "index": 58,
+      "eligible": 1540,
+      "pool": 1513
+    },
+    {
+      "index": 59,
+      "eligible": 13688,
+      "pool": 13466
+    },
+    {
+      "index": 60,
+      "eligible": 2960,
+      "pool": 2910
+    },
+    {
+      "index": 61,
+      "eligible": 7368,
+      "pool": 7289
+    },
+    {
+      "index": 62,
+      "eligible": 2438,
+      "pool": 2389
+    },
+    {
+      "index": 63,
+      "eligible": 3706,
+      "pool": 3616
+    }
+  ]
+}

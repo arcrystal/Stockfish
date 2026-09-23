@@ -1,0 +1,52 @@
+Existing nn-134a887f4c8f.nnue validated, skipping download
+
+Config:
+debug: 'no'
+sanitize: 'none'
+optimize: 'yes'
+arch: 'arm64'
+bits: '64'
+kernel: 'Darwin'
+os: ''
+prefetch: 'yes'
+popcnt: 'yes'
+pext: 'no'
+sse: 'no'
+mmx: 'no'
+sse2: 'no'
+ssse3: 'no'
+sse41: 'no'
+avx2: 'no'
+avxvnni: 'no'
+avx512: 'no'
+vnni512: 'no'
+avx512icl: 'no'
+altivec: 'no'
+vsx: 'no'
+neon: 'yes'
+dotprod: 'yes'
+arm_version: '8'
+lsx: 'no'
+lasx: 'no'
+syzygy: 'yes'
+target_windows: ''
+
+Flags:
+CXX: clang++
+CXXFLAGS:  -Wall -Wcast-qual -fno-exceptions -std=c++17  -pedantic -Wextra -Wshadow -Wmissing-prototypes -Wconditional-uninitialized -flax-vector-conversions=none -fconstexpr-steps=500000000 -m64 -mmacosx-version-min=10.15 -arch arm64 -DNDEBUG -O3 -funroll-loops -mdynamic-no-pic -DIS_64BIT -DUSE_POPCNT -DUSE_NEON=8 -march=armv8.2-a+dotprod -DUSE_NEON_DOTPROD -DARCH=apple-silicon -flto=full -Xclang -mllvm -Xclang -inline-threshold=500
+LDFLAGS:   -m64 -mmacosx-version-min=10.15 -arch arm64 -lpthread  -Wall -Wcast-qual -fno-exceptions -std=c++17  -pedantic -Wextra -Wshadow -Wmissing-prototypes -Wconditional-uninitialized -flax-vector-conversions=none -fconstexpr-steps=500000000 -m64 -mmacosx-version-min=10.15 -arch arm64 -DNDEBUG -O3 -funroll-loops -mdynamic-no-pic -DIS_64BIT -DUSE_POPCNT -DUSE_NEON=8 -march=armv8.2-a+dotprod -DUSE_NEON_DOTPROD -DARCH=apple-silicon -flto=full -Xclang -mllvm -Xclang -inline-threshold=500
+
+Testing config sanity. If this fails, try 'make help' ...
+
+/Applications/Xcode.app/Contents/Developer/usr/bin/make ARCH=apple-silicon COMP=clang all
+clang++ -Wall -Wcast-qual -fno-exceptions -std=c++17 -pedantic -Wextra -Wshadow -Wmissing-prototypes -Wconditional-uninitialized -flax-vector-conversions=none -fconstexpr-steps=500000000 -m64 -mmacosx-version-min=10.15 -arch arm64 -DNDEBUG -O3 -funroll-loops -mdynamic-no-pic -DIS_64BIT -DUSE_POPCNT -DUSE_NEON=8 -march=armv8.2-a+dotprod -DUSE_NEON_DOTPROD -DARCH=apple-silicon -flto=full -Xclang -mllvm -Xclang -inline-threshold=500 -c -o movepick.o movepick.cpp
+In file included from movepick.cpp:19:
+In file included from ./movepick.h:22:
+In file included from ./history.h:22:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm:1840:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:15:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/availability.h:204:4: warning: "The selected platform is no longer supported by libc++." [-W#warnings]
+  204 | #  warning "The selected platform is no longer supported by libc++."
+      |    ^
+1 warning generated.
+clang++ -o stockfish attacks.o benchmark.o bitboard.o evaluate.o main.o misc.o movegen.o movepick.o position.o search.o thread.o timeman.o tt.o uci.o ucioption.o tune.o tbprobe.o nnue_accumulator.o nnue_misc.o network.o half_ka_v2_hm.o full_threats.o pp_3wide.o engine.o score.o memory.o   -m64 -mmacosx-version-min=10.15 -arch arm64 -lpthread  -Wall -Wcast-qual -fno-exceptions -std=c++17  -pedantic -Wextra -Wshadow -Wmissing-prototypes -Wconditional-uninitialized -flax-vector-conversions=none -fconstexpr-steps=500000000 -m64 -mmacosx-version-min=10.15 -arch arm64 -DNDEBUG -O3 -funroll-loops -mdynamic-no-pic -DIS_64BIT -DUSE_POPCNT -DUSE_NEON=8 -march=armv8.2-a+dotprod -DUSE_NEON_DOTPROD -DARCH=apple-silicon -flto=full -Xclang -mllvm -Xclang -inline-threshold=500

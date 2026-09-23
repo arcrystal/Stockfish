@@ -1,0 +1,1072 @@
+{
+  "valid_treatments": 128,
+  "matched_roots": 64,
+  "selection_sha256": "5932cf589f772e3562b5bbe7a2c898e7b143becccf04e41c4ce3dd091392195a",
+  "groups": {
+    "positive": {
+      "count": 64,
+      "classifications": {
+        "still_fail_low": 64,
+        "exposed_illusion": 0,
+        "verification_supported_recovery": 0,
+        "accepted_without_further_verification": 0
+      },
+      "recovery_rate": 0.0,
+      "descriptive_binomial_95_interval": [
+        0.0,
+        0.05600908938663657
+      ],
+      "cost_deltas": {
+        "scout_nodes_delta": {
+          "sum": 135,
+          "mean": 2.109375,
+          "median": 0.0,
+          "min": -2,
+          "max": 51
+        },
+        "move_nodes_delta": {
+          "sum": 135,
+          "mean": 2.109375,
+          "median": 0.0,
+          "min": -2,
+          "max": 51
+        },
+        "root_nodes_delta": {
+          "sum": 35007,
+          "mean": 546.984375,
+          "median": 0.0,
+          "min": -8798,
+          "max": 34296
+        }
+      },
+      "unchanged_cost_counts": {
+        "scout_nodes_delta": 52,
+        "move_nodes_delta": 52,
+        "root_nodes_delta": 47
+      },
+      "all_three_costs_unchanged": 47,
+      "root_bestmoves_changed": 6,
+      "entire_root_trace_unchanged": 47,
+      "scout_score_changed": 14,
+      "baseline_root_nodes": 1862859
+    },
+    "nonpositive": {
+      "count": 64,
+      "classifications": {
+        "still_fail_low": 64,
+        "exposed_illusion": 0,
+        "verification_supported_recovery": 0,
+        "accepted_without_further_verification": 0
+      },
+      "recovery_rate": 0.0,
+      "descriptive_binomial_95_interval": [
+        0.0,
+        0.05600908938663657
+      ],
+      "cost_deltas": {
+        "scout_nodes_delta": {
+          "sum": 23,
+          "mean": 0.359375,
+          "median": 0.0,
+          "min": 0,
+          "max": 6
+        },
+        "move_nodes_delta": {
+          "sum": 23,
+          "mean": 0.359375,
+          "median": 0.0,
+          "min": 0,
+          "max": 6
+        },
+        "root_nodes_delta": {
+          "sum": -55782,
+          "mean": -871.59375,
+          "median": 0.0,
+          "min": -35928,
+          "max": 13312
+        }
+      },
+      "unchanged_cost_counts": {
+        "scout_nodes_delta": 55,
+        "move_nodes_delta": 55,
+        "root_nodes_delta": 54
+      },
+      "all_three_costs_unchanged": 54,
+      "root_bestmoves_changed": 2,
+      "entire_root_trace_unchanged": 54,
+      "scout_score_changed": 11,
+      "baseline_root_nodes": 1862859
+    }
+  },
+  "pairs": [
+    {
+      "root_index": 0,
+      "bucket": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 4,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 2694,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 1,
+      "bucket": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 2,
+      "bucket": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 1,
+      "nonpositive_move_nodes_delta": 3,
+      "positive_root_nodes_delta": 1306,
+      "nonpositive_root_nodes_delta": -11944
+    },
+    {
+      "root_index": 3,
+      "bucket": [
+        3,
+        0,
+        1,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 4,
+      "bucket": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 5,
+      "bucket": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 4,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": -780,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 6,
+      "bucket": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 2,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 11738,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 7,
+      "bucket": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 8,
+      "bucket": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 9,
+      "bucket": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 10,
+      "bucket": [
+        2,
+        0,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 8,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": -5772,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 11,
+      "bucket": [
+        3,
+        2,
+        2,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 12,
+      "bucket": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 39,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": -91,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 13,
+      "bucket": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 9,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": -3423,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 14,
+      "bucket": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 34296,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 15,
+      "bucket": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 16,
+      "bucket": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 3,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 3093
+    },
+    {
+      "root_index": 17,
+      "bucket": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": -6249,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 18,
+      "bucket": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 13,
+      "nonpositive_move_nodes_delta": 1,
+      "positive_root_nodes_delta": -4135,
+      "nonpositive_root_nodes_delta": -15023
+    },
+    {
+      "root_index": 19,
+      "bucket": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 2,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": -135
+    },
+    {
+      "root_index": 20,
+      "bucket": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 21,
+      "bucket": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 22,
+      "bucket": [
+        2,
+        0,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 23,
+      "bucket": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 24,
+      "bucket": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 6,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": -825
+    },
+    {
+      "root_index": 25,
+      "bucket": [
+        3,
+        1,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 26,
+      "bucket": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 27,
+      "bucket": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 51,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": -142,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 28,
+      "bucket": [
+        2,
+        0,
+        2,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 29,
+      "bucket": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 30,
+      "bucket": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 31,
+      "bucket": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": -2,
+      "nonpositive_move_nodes_delta": 1,
+      "positive_root_nodes_delta": -260,
+      "nonpositive_root_nodes_delta": 1
+    },
+    {
+      "root_index": 32,
+      "bucket": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 33,
+      "bucket": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 34,
+      "bucket": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 35,
+      "bucket": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 1,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 6797,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 36,
+      "bucket": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": -2594,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 37,
+      "bucket": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 38,
+      "bucket": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 39,
+      "bucket": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 4,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": -35928
+    },
+    {
+      "root_index": 40,
+      "bucket": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 41,
+      "bucket": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 42,
+      "bucket": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 43,
+      "bucket": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 44,
+      "bucket": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 45,
+      "bucket": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 46,
+      "bucket": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 47,
+      "bucket": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 2,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 13312
+    },
+    {
+      "root_index": 48,
+      "bucket": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": -1610,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 49,
+      "bucket": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 50,
+      "bucket": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 51,
+      "bucket": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 52,
+      "bucket": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 53,
+      "bucket": [
+        2,
+        1,
+        0,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 54,
+      "bucket": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 1,
+      "positive_root_nodes_delta": -8798,
+      "nonpositive_root_nodes_delta": -7847
+    },
+    {
+      "root_index": 55,
+      "bucket": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 56,
+      "bucket": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 57,
+      "bucket": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 58,
+      "bucket": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 59,
+      "bucket": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 60,
+      "bucket": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 61,
+      "bucket": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 5,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 12030,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 62,
+      "bucket": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": 0
+    },
+    {
+      "root_index": 63,
+      "bucket": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "positive_recovery": 0,
+      "nonpositive_recovery": 0,
+      "positive_move_nodes_delta": 0,
+      "nonpositive_move_nodes_delta": 0,
+      "positive_root_nodes_delta": 0,
+      "nonpositive_root_nodes_delta": -486
+    }
+  ],
+  "paired_recovery": {
+    "positive_only": 0,
+    "nonpositive_only": 0,
+    "both": 0,
+    "neither": 64,
+    "observed_difference": 0.0,
+    "exact_mcnemar_two_sided_p": null,
+    "note": "No discordants gives no conditional comparison information; no zero-width interval."
+  }
+}

@@ -1,0 +1,5 @@
+ld: LTO codegen error: <inline asm>:5:9: Could not find incbin file 'nn-134a887f4c8f.nnue'
+.incbin "nn-134a887f4c8f.nnue"
+        ^
+
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)

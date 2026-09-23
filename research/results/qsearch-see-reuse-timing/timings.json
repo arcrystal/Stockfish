@@ -1,0 +1,423 @@
+{
+  "started_utc": "2026-09-20T21:36:49.811849+00:00",
+  "purpose": "Predeclared 20 paired whole-engine fixed-depth benchmarks; no Elo estimate.",
+  "bench_args": [
+    "bench",
+    "16",
+    "1",
+    "15",
+    "default",
+    "depth"
+  ],
+  "method": "One warmup per engine, then 20 pairs in alternating AB/BA order. No discarded runs.",
+  "inputs": {
+    "base": {
+      "path": "/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/stockfish-baseline",
+      "sha256": "3bc6989c07a680e8478a997b5fcafb877724ac4909509341d1b0d373e7eb6083"
+    },
+    "candidate": {
+      "path": "/Users/acrystal/Desktop/Coding/Games/Stockfish/.research-tools/qsearch-see-reuse/src/stockfish",
+      "sha256": "8753057b05951d5ed57c226942f2da57274df3da6d0c9b26aee74d6283adc100"
+    }
+  },
+  "runs": [
+    {
+      "pair": 0,
+      "warmup": true,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3389,
+      "wall_seconds": 3.5616485420032404
+    },
+    {
+      "pair": 0,
+      "warmup": true,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3384,
+      "wall_seconds": 3.5744838750106283
+    },
+    {
+      "pair": 1,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3383,
+      "wall_seconds": 3.5763602500082925
+    },
+    {
+      "pair": 1,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3394,
+      "wall_seconds": 3.5852006250061095
+    },
+    {
+      "pair": 2,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3377,
+      "wall_seconds": 3.5685689999954775
+    },
+    {
+      "pair": 2,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3370,
+      "wall_seconds": 3.56601912502083
+    },
+    {
+      "pair": 3,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3373,
+      "wall_seconds": 3.5647068340040278
+    },
+    {
+      "pair": 3,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3352,
+      "wall_seconds": 3.546565249998821
+    },
+    {
+      "pair": 4,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3352,
+      "wall_seconds": 3.545198125008028
+    },
+    {
+      "pair": 4,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3390,
+      "wall_seconds": 3.5642961250268854
+    },
+    {
+      "pair": 5,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3377,
+      "wall_seconds": 3.570205584022915
+    },
+    {
+      "pair": 5,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3372,
+      "wall_seconds": 3.5636807089904323
+    },
+    {
+      "pair": 6,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3407,
+      "wall_seconds": 3.5980350419995375
+    },
+    {
+      "pair": 6,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3382,
+      "wall_seconds": 3.574059792008484
+    },
+    {
+      "pair": 7,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3375,
+      "wall_seconds": 3.568124125013128
+    },
+    {
+      "pair": 7,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3365,
+      "wall_seconds": 3.5581184579932597
+    },
+    {
+      "pair": 8,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3369,
+      "wall_seconds": 3.562605249986518
+    },
+    {
+      "pair": 8,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3383,
+      "wall_seconds": 3.5568254580139183
+    },
+    {
+      "pair": 9,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3389,
+      "wall_seconds": 3.579886583989719
+    },
+    {
+      "pair": 9,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3377,
+      "wall_seconds": 3.5728982090076897
+    },
+    {
+      "pair": 10,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3314,
+      "wall_seconds": 3.504563042020891
+    },
+    {
+      "pair": 10,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3275,
+      "wall_seconds": 3.46314775000792
+    },
+    {
+      "pair": 11,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3301,
+      "wall_seconds": 3.4923228330153506
+    },
+    {
+      "pair": 11,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3279,
+      "wall_seconds": 3.4711832079919986
+    },
+    {
+      "pair": 12,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3274,
+      "wall_seconds": 3.465421790984692
+    },
+    {
+      "pair": 12,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3257,
+      "wall_seconds": 3.4475410000013653
+    },
+    {
+      "pair": 13,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3270,
+      "wall_seconds": 3.4413765000062995
+    },
+    {
+      "pair": 13,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3270,
+      "wall_seconds": 3.4625896670040675
+    },
+    {
+      "pair": 14,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3343,
+      "wall_seconds": 3.5364367089932784
+    },
+    {
+      "pair": 14,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3383,
+      "wall_seconds": 3.576119832985569
+    },
+    {
+      "pair": 15,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3377,
+      "wall_seconds": 3.5714181669754907
+    },
+    {
+      "pair": 15,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3368,
+      "wall_seconds": 3.5633157499833032
+    },
+    {
+      "pair": 16,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3367,
+      "wall_seconds": 3.5570613339950796
+    },
+    {
+      "pair": 16,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3380,
+      "wall_seconds": 3.5732421659922693
+    },
+    {
+      "pair": 17,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3402,
+      "wall_seconds": 3.5743436659977306
+    },
+    {
+      "pair": 17,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3394,
+      "wall_seconds": 3.5856458750204183
+    },
+    {
+      "pair": 18,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3386,
+      "wall_seconds": 3.578771415981464
+    },
+    {
+      "pair": 18,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3372,
+      "wall_seconds": 3.5633038750092965
+    },
+    {
+      "pair": 19,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3383,
+      "wall_seconds": 3.5743313749844674
+    },
+    {
+      "pair": 19,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3387,
+      "wall_seconds": 3.5791587500134483
+    },
+    {
+      "pair": 20,
+      "warmup": false,
+      "engine": "candidate",
+      "nodes": 3749986,
+      "search_ms": 3391,
+      "wall_seconds": 3.581650250009261
+    },
+    {
+      "pair": 20,
+      "warmup": false,
+      "engine": "base",
+      "nodes": 3749986,
+      "search_ms": 3384,
+      "wall_seconds": 3.5765200830064714
+    }
+  ],
+  "summary": {
+    "search_ms": {
+      "geometric_speedup_percent": 0.10003758602018092,
+      "approximate_95pct_interval_percent": [
+        -0.17563931081187273,
+        0.3764757975345652
+      ],
+      "paired_log_speed_ratios": [
+        -0.0032462770134631413,
+        -0.0020749970391602496,
+        0.006245373459676535,
+        0.011272738772522215,
+        0.0014817012638217008,
+        -0.007364888202440964,
+        0.002967361227802008,
+        0.004146925374155604,
+        0.0035471512214835395,
+        -0.011838049917155872,
+        0.0066869550085448684,
+        -0.00520595265484673,
+        0.0,
+        0.011894282360609937,
+        0.0026686450233502777,
+        0.0038535693159899723,
+        0.0023543271616353607,
+        -0.004143243571334514,
+        -0.0011816840370631801,
+        -0.0020664213995247507
+      ]
+    },
+    "wall_seconds": {
+      "geometric_speedup_percent": -0.019320300448576796,
+      "approximate_95pct_interval_percent": [
+        -0.27046997044913884,
+        0.23246184176681167
+      ],
+      "paired_log_speed_ratios": [
+        -0.002468841539548855,
+        -0.0007147925117846138,
+        0.005102216072441839,
+        0.005372546987069528,
+        0.00182926292456761,
+        -0.006685728466121698,
+        0.0028081204023940065,
+        -0.001623667250774597,
+        0.0019540297682306717,
+        -0.011887915842336087,
+        0.006071565053459792,
+        -0.005173130942553509,
+        -0.006145231086643688,
+        0.01115872626851354,
+        0.0022712607280390806,
+        0.004538617401915615,
+        -0.003157048860287976,
+        -0.004331392354216951,
+        -0.0013496560916175875,
+        -0.0014333740725563126
+      ]
+    }
+  },
+  "limitations": "Intervals assume paired log ratios are approximately independent and stationary. No CPU affinity was applied on macOS. Thermal, OS scheduling and run-order effects may remain. One build per variant: PGO/layout variation is not isolated. This is local ARM64 timing, not Elo.",
+  "finished_utc": "2026-09-20T21:39:19.082943+00:00"
+}

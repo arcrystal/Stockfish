@@ -122,3 +122,46 @@ Both independent trials completed with Fishtest SPRT `rejected`, without manual 
 Pentanomials: `[54,5693,12546,5478,69]` and `[70,6365,14335,6177,77]`. Server completion timestamps: 17 September 09:50:21 UTC and 12:39:06 UTC. Full terminal payloads: `results/fishtest-tt-bound-elo.json` and `results/fishtest-queen-escape-elo.json`. Both intervals include zero; the appropriate decision is failure to establish the intended gain, not a definitive regression claim. Fishtest's terminal decision includes overshoot accounting.
 
 There are now zero active Fishtest experiments. All four previously validated search candidates have rejected STC results, and the exact-output NNUE candidate lacked a demonstrated speed benefit. None is combined or rerolled. The orchestration agent is assigned the next ranked hypothesis from report 01: a logging-only baseline diagnostic for correction-direction conflict and its potential effect on rounded quiet-move reductions. This must establish practical incidence and support the mechanism before a production prototype and its functional checks/local screen can justify another submission. No new rating test is authorized by diagnostic counts alone.
+
+## Second-pass rethink — 20 September 2026
+
+The user requested a fundamental rethink after four negative STC estimates (220,640 games total). The new orchestration report `agents/second-pass-synthesis.md` supersedes the initial candidate ranking. The remaining old hypotheses are not automatically promoted. All failed source branches remain separate and preserved.
+
+New baseline observations preserve bench 1648567 and all iteration score/node/PV and final bestmove outputs on 64 fixed-seed UHO positions, depth 13, one thread, Hash=16. LMR verification outcomes do not justify an outcome-dependent continuation bonus or a new reliability gate. Retaining the exact singularity-refuting quiet also failed its opportunity test: current histories already put 615 of 724 observed candidates first; the 23 later successful cutoff witnesses had only 231 preceding quiet nodes total across 1,704,360 searched nodes. That is a descriptive opportunity count, not guaranteed savings. Pawn-history residuals were small and exploratory, with no reduced fail-low audit; no new reduction term is justified yet. Raw evidence is in `results/lmr-observation/`, `results/lmr-pawn-observation/`, and `results/singular-witness-observation/`.
+
+### Candidate 6: reuse an already passed qsearch SEE threshold
+
+Branch `codex/qsearch-see-reuse`, independently based on 031dfeb4. When qsearch's first `see_ge(move, alpha-futilityBase)` passes at a threshold >= -74, a move-local boolean skips the later `see_ge(move,-74)`. The same board/move and monotone threshold evaluator imply that answer. First-call failure handling remains unchanged. No heuristic coefficient, pruning rule, search depth, history update or neural parameter changes.
+
+This is selected for one cheap performance falsification, **not** as an established strong upgrade. The observational 64-position corpus found 15,219 reusable calls, of which only 4,190 entered attack generation and 5,578 exchange-loop iterations were potentially avoided; there were zero implication violations. The potential whole-engine benefit is small and may be erased by added branch/state overhead. See the independent proof audit and source report.
+
+Before seeing candidate speed results, declare exactly the existing 20-pair `compare_speed.py` procedure: one warmup per engine, fixed depth 15, one thread, Hash=16, alternating AB/BA, all timings retained, identical nodes required, no simultaneous builds/games. Use the same Apple-clang PGO configuration. A production bench mismatch stops promotion. Functional/reproducibility checks and a useful measured whole-engine speed benefit must precede Fishtest. No timing rerolls or combined SEE variants will be used to chase a favorable estimate. ARM timing alone does not establish x86 speed or Elo.
+
+Candidate 6 is published as `5e16e3f3` on `codex/qsearch-see-reuse`. It retained bench **1648567**, passed all 75 functional tests and 20 reproducibility cases, and passed the SEE monotonicity/implication harness over **70 positions, 2,172 legal moves, 17,795,196 threshold queries and 143,554 reuse implications**. All four move types were exercised. The first standalone-harness link failed because LTO's embedded-network relative path was resolved from the repository root; rerunning the same link from the candidate src directory fixed it. Both linker logs and the successful command are retained; this was a harness working-directory issue, not an engine test failure.
+
+The predeclared 20 timing pairs completed, with both warmups and every measured run retained. All 42 runs searched **3,749,986 nodes**. Search-time geometric speedup: **+0.100%**, approximate paired 95% interval **[−0.176%, +0.376%]**. External wall speedup: **−0.019%**, interval **[−0.270%, +0.232%]**. This does not establish a useful whole-engine speed gain. **Set candidate 6 aside; no Fishtest submission.** These are local ARM results from one PGO build pair, with normal OS background activity and no CPU affinity; they neither prove a slowdown nor establish x86 performance. Full evidence: `results/qsearch-see-reuse-timing/` and associated build/functional/repro/property logs.
+
+The next bounded diagnostic measures the missing labels directly: reduced fail-lows. An unchanged baseline observer will collect a fresh 64-position UHO corpus (seed 20260921, excluding the previous64), select at most one positive-pawn and one nonpositive-pawn candidate per root, and replay the identical deterministic root prefix with exactly one scout changed from d to d+1. Restrict to quiet, non-PV, non-check, non-excluded events at parent depth >=6, actual reduction >=2 and nonpositive current statScore. Entry identities must match, ss->reduction must reflect the tested depth, and normal downstream verification stays intact. Cap at128 intervention replays and retain every result. No pawn-history coefficient or production policy is chosen from survival correlations alone.
+
+
+### Completed causal pawn-LMR audit — 23 September 2026 UTC
+
+The frozen fresh corpus (seed 20260921) matched the baseline's complete iteration traces on all **64/64** roots at depth 13, Threads=1, Hash=16. Standard bench remained **1648567**. All roots supplied a common matching bucket, producing exactly **128 targets** selected before treatment. Selection SHA256: `5932cf589f772e3562b5bbe7a2c898e7b143becccf04e41c4ce3dd091392195a`. The diagnostic binary SHA256 is `f6b301ee1b2a5f62c8d9162d5dd75f55a2dc43cd03db4ac1385d4fdf14749840`; its source patch, protocol and runner are preserved.
+
+All 128 single-event replays passed the recorded identity and prefix checks, with no invalid/aborted results. Each changed only one selected scout from d to d+1 while keeping the reduction field and normal downstream policy consistent. **Both pawn-history groups remained fail-low in all 64/64 cases.** There were zero verification-supported recoveries, zero exposed illusions and zero accepted-without-verification threshold crossings. No event was replaced or rerolled.
+
+| Outcome | Positive pawn history | Nonpositive pawn history |
+|---|---:|---:|
+| Valid treatments | 64 | 64 |
+| Verification-supported recoveries | 0 | 0 |
+| Unchanged local move-node count | 52 | 55 |
+| Sum of local move-node deltas | +135 | +23 |
+| Unchanged whole-root node count | 47 | 54 |
+| Sum of whole-root node deltas | +35,007 | −55,782 |
+| Changed final best move | 6 | 2 |
+
+The nominal depth intervention frequently caused no measured additional local work. Existing TT reuse, pruning and child-depth adjustments can absorb a nominal ply; the audit does not isolate which mechanism explains each case. Changed root nodes or best moves do not establish better chess. Zero recoveries in this small, restricted sample are insufficient to estimate targeting advantage or reject every broader pawn-context policy. In particular, a zero-width empirical bootstrap interval would be misleading. This result provides **no support for selecting a production reduction coefficient or submitting this hypothesis to Fishtest**.
+
+Full evidence is in `results/pawn-lmr-audit/`. Large raw logs/JSON are losslessly gzip-compressed for publication; the compression manifest records original and compressed SHA256 hashes, with decompressed equality checked before replacement. Restore them before using the frozen runners. No observations are discarded.
+
+**Research-pass disposition:** six isolated implementation branches are preserved; four STC candidates rejected and two exact-output performance candidates lacked established speed gains. The second-pass witness, LMR reliability and pawn-context screens support no new production candidate. Cost-aware ordering remains an unexecuted diagnostic design, not a tested or exhausted hypothesis. There is no supported winning engine to build, no active Fishtest run, and no basis for LTC. An attempt to pause the recorded test follow-up returned that the automation no longer exists in the app (possibly deleted by the user); it was not recreated. No further submission is scheduled by this work. This closes the measured candidate set, not the broader question of improving Stockfish.

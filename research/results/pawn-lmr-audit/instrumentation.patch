@@ -1,0 +1,149 @@
+diff --git a/src/search.cpp b/src/search.cpp
+index 842fd157..35f25d54 100644
+--- a/src/search.cpp
++++ b/src/search.cpp
+@@ -21,7 +21,9 @@
+ #include <algorithm>
+ #include <array>
+ #include <atomic>
++#include <array>
+ #include <cassert>
++#include <cstdio>
+ #include <chrono>
+ #include <cmath>
+ #include <cstdint>
+@@ -68,6 +70,27 @@ using namespace Search;
+ 
+ namespace {
+ 
++// Causal diagnostic only: exactly one worker and one search per process.
++// The default target 0 observes the original policy without changing it.
++struct PawnLmrAudit {
++    u64 ordinal = 0, digest = 14695981039346656037ULL, hits = 0;
++    u64 target = std::getenv("SF_PAWN_AUDIT_TARGET")
++                   ? std::strtoull(std::getenv("SF_PAWN_AUDIT_TARGET"), nullptr, 10) : 0;
++    const char* expected = std::getenv("SF_PAWN_AUDIT_ENTRY");
++    void mix(u64 value) {
++        for (int byte = 0; byte < 8; ++byte) {
++            digest ^= (value >> (8 * byte)) & 255;
++            digest *= 1099511628211ULL;
++        }
++    }
++    ~PawnLmrAudit() {
++        std::fprintf(stderr, "PAWN_AUDIT_TOTAL,%llu,%llu,%llu,%llu\n",
++          (unsigned long long) ordinal, (unsigned long long) digest,
++          (unsigned long long) target, (unsigned long long) hits);
++    }
++} pawnLmrAudit;
++
++
+ constexpr u64 NODES_LIMIT_OUTPUT = 10'000'000;
+ 
+ constexpr int SEARCHEDLIST_CAPACITY = 32;
+@@ -1319,6 +1342,10 @@ moves_loop:  // When in check, search starts here
+ 
+         u64 nodeCount = rootNode ? u64(nodes) : 0;
+ 
++        // Snapshot in the parent position; never read its pawn key after do_move.
++        const int auditPawn = !capture
++          ? int(sharedHistory.pawn_entry(pos)[movedPiece][move.to_sq()]) : 0;
++
+         // Step 17. Make the move
+         do_move(pos, move, st, givesCheck, ss);
+ 
+@@ -1383,9 +1410,69 @@ moves_loop:  // When in check, search starts here
+             // std::clamp has been replaced by a more robust implementation.
+             Depth d = std::max(1, std::min(newDepth - r / 1024, newDepth + 2)) + PvNode;
+ 
++            const Depth auditOriginalD = d;
++            const u64 auditOrdinal = ++pawnLmrAudit.ordinal;
++            const u64 auditPrefix = pawnLmrAudit.digest;
++            const std::array<u64, 44> auditFields = {
++                posKey, pos.key(), u64(move.raw()), u64(alpha), u64(beta), u64(bestValue),
++                u64(depth), u64(newDepth), u64(d), u64(moveCount), u64(ss->statScore),
++                u64(auditPawn), u64(ss->ply), u64(PvNode), u64(cutNode), u64(ss->inCheck),
++                u64(excludedMove.raw()), u64(ss->ttPv), u64(ss->followPV),
++                u64(ttData.move.raw()), u64(givesCheck), u64(eval), u64(ss->staticEval),
++                u64(correctionValue), u64(rootDepth), u64(nodes), u64(extension),
++                u64(capture), u64(priorCapture), u64(movedPiece),
++                u64(!capture ? int(mainHistory[us][move.raw()]) : 0),
++                u64(!capture ? int((*contHist[0])[movedPiece][move.to_sq()]) : 0),
++                u64(!capture ? int((*contHist[1])[movedPiece][move.to_sq()]) : 0),
++                u64(ttData.value), u64(ttData.depth), u64(ttData.bound), u64(ttHit),
++                pos.state()->previous->pawnKey, u64(pos.state()->previous->rule50),
++                u64(pos.state()->previous->repetition), u64(pos.state()->previous->pliesFromNull),
++                pos.state()->previous->previous ? pos.state()->previous->previous->key : 0,
++                u64(pos.state()->repetition), u64(pos.rule50_count())};
++            pawnLmrAudit.mix(auditOrdinal);
++            for (u64 field : auditFields)
++                pawnLmrAudit.mix(field);
++            const u64 auditDigest = pawnLmrAudit.digest;
++            const bool auditEligible = !rootNode && !PvNode && !ss->inCheck && !excludedMove
++              && !capture && depth >= 6 && ss->statScore <= 0 && newDepth - d >= 2
++              && is_valid(alpha) && is_valid(beta) && !is_decisive(alpha) && !is_decisive(beta);
++            const bool auditTarget = auditOrdinal == pawnLmrAudit.target;
++            if (auditEligible || auditTarget) {
++                std::fprintf(stderr, "PAWN_AUDIT_ENTRY,%llu,%llu,%llu",
++                  (unsigned long long) auditOrdinal, (unsigned long long) auditPrefix,
++                  (unsigned long long) auditDigest);
++                for (u64 field : auditFields)
++                    std::fprintf(stderr, ",%llu", (unsigned long long) field);
++                std::fprintf(stderr, ",%d,%d\n", int(auditEligible), int(auditTarget));
++            }
++            bool auditMatched = false;
++            if (auditTarget) {
++                std::string identity = std::to_string(auditOrdinal) + ","
++                  + std::to_string(auditPrefix) + "," + std::to_string(auditDigest);
++                for (u64 field : auditFields)
++                    identity += "," + std::to_string(field);
++                auditMatched = auditEligible && pawnLmrAudit.expected
++                  && identity == pawnLmrAudit.expected;
++                if (!auditMatched) {
++                    std::fprintf(stderr, "PAWN_AUDIT_MISMATCH,%llu\n",
++                      (unsigned long long) auditOrdinal);
++                    std::abort();
++                }
++            }
++            // The only policy perturbation follows an exact pre-search anchor check.
++            if (auditTarget && auditMatched) {
++                ++d;
++                ++pawnLmrAudit.hits;
++            }
++            const u64 auditStartNodes = nodes;
+             ss->reduction = newDepth - d;
+             value         = -search<NonPV>(pos, ss + 1, -(alpha + 1), -alpha, d, true);
+             ss->reduction = 0;
++            const Value auditReduced = value;
++            const u64 auditScoutNodes = u64(nodes) - auditStartNodes;
++            bool auditVerified = false;
++            int auditVerificationDepth = 0;
++
+ 
+             // Do a full-depth search when reduced LMR search fails high
+             // (*Scaler) Shallower searches here don't scale well
+@@ -1398,12 +1485,24 @@ moves_loop:  // When in check, search starts here
+ 
+                 newDepth += doDeeperSearch - doShallowerSearch;
+ 
+-                if (newDepth > d)
++                if (newDepth > d) {
++                    auditVerified = true;
++                    auditVerificationDepth = newDepth;
+                     value = -search<NonPV>(pos, ss + 1, -(alpha + 1), -alpha, newDepth, !cutNode);
++                }
+ 
+                 // Post LMR continuation history updates
+                 update_continuation_histories(ss, movedPiece, move.to_sq(), 1334);
+             }
++            if (auditEligible || auditTarget)
++                std::fprintf(stderr,
++                  "PAWN_AUDIT_RESULT,%llu,%d,%d,%d,%d,%d,%d,%d,%llu,%llu,%d,%d\n",
++                  (unsigned long long) auditOrdinal, int(auditOriginalD), int(d),
++                  int(auditReduced), int(auditVerified), auditVerificationDepth, int(value),
++                  int(threads.stop.load(std::memory_order_relaxed)),
++                  (unsigned long long) auditScoutNodes,
++                  (unsigned long long) (u64(nodes) - auditStartNodes),
++                  int(value > alpha), int(value >= beta));
+         }
+ 
+         // Step 19. Full-depth search when LMR is skipped

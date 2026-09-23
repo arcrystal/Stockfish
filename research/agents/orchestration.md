@@ -1,8 +1,10 @@
 # Stockfish Elo research: orchestration and decision record
 
-Research baseline: `031dfeb437fa6b06cdbdf4ef89dfb82f6b83c4d3` (September 13, 2026). Personal fork: [arcrystal/Stockfish](https://github.com/arcrystal/Stockfish). This document prioritizes hypotheses and records research coverage. Actual builds, candidate commits, matches, and Fishtest status are maintained by the lead agent in the [experiment ledger](../EXPERIMENTS.md).
+Research baseline: `031dfeb437fa6b06cdbdf4ef89dfb82f6b83c4d3` (September 13, 2026). Personal fork: [arcrystal/Stockfish](https://github.com/arcrystal/Stockfish).
 
-**Current conclusion:** suppressing negative correction-history updates from excluded-move searches is the strongest first experiment on causal reasoning and implementation cost. A 1,000-game local screen has not established a gain. The lead submitted the isolated candidate to [Fishtest](https://tests.stockfishchess.org/tests/view/6aa85960cb562be55c88e907); completed Fishtest evidence is still required before describing the candidate as stronger.
+**20 September update:** all four submitted search candidates were rejected at STC. This initial ranking is historical. Read the [second-pass synthesis](second-pass-synthesis.md) and current ledger before continuing experiments. This document prioritizes hypotheses and records research coverage. Actual builds, candidate commits, matches, and Fishtest status are maintained by the lead agent in the [experiment ledger](../EXPERIMENTS.md).
+
+**Historical first-pass conclusion (superseded):** suppressing negative correction-history updates from excluded-move searches is the strongest first experiment on causal reasoning and implementation cost. A 1,000-game local screen has not established a gain. The lead submitted the isolated candidate to [Fishtest](https://tests.stockfishchess.org/tests/view/6aa85960cb562be55c88e907); completed Fishtest evidence is still required before describing the candidate as stronger.
 
 The research intentionally does not infer a rating increase from the number of agents, lines read, a changed benchmark signature, historical success of related patches, or a favorable small sample. Logical consistency can improve a heuristic's interpretation while making an empirically tuned engine weaker.
 

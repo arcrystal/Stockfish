@@ -1,0 +1,77 @@
+diff --git a/src/search.cpp b/src/search.cpp
+index 842fd157..c1f83f07 100644
+--- a/src/search.cpp
++++ b/src/search.cpp
+@@ -26,6 +26,7 @@
+ #include <cmath>
+ #include <cstdint>
+ #include <cstdlib>
++#include <cstdio>
+ #include <initializer_list>
+ #include <iostream>
+ #include <list>
+@@ -68,6 +69,14 @@ using namespace Search;
+ 
+ namespace {
+ 
++// Diagnostic only: single search worker, fixed-depth observations, no policy changes.
++struct LmrObservation {
++    unsigned long long calls = 0, highs = 0, verified = 0;
++    ~LmrObservation() {
++        std::fprintf(stderr, "LMR_TOTAL,%llu,%llu,%llu\n", calls, highs, verified);
++    }
++} lmrObservation;
++
+ constexpr u64 NODES_LIMIT_OUTPUT = 10'000'000;
+ 
+ constexpr int SEARCHEDLIST_CAPACITY = 32;
+@@ -1317,6 +1326,8 @@ moves_loop:  // When in check, search starts here
+                 extension = -3;
+         }
+ 
++        const int observationPawn = !capture
++          ? int(sharedHistory.pawn_entry(pos)[movedPiece][move.to_sq()]) : 0;
+         u64 nodeCount = rootNode ? u64(nodes) : 0;
+ 
+         // Step 17. Make the move
+@@ -1383,6 +1394,10 @@ moves_loop:  // When in check, search starts here
+             // std::clamp has been replaced by a more robust implementation.
+             Depth d = std::max(1, std::min(newDepth - r / 1024, newDepth + 2)) + PvNode;
+ 
++            const u64 observationStart = nodes;
++            const int observationStat = ss->statScore;
++            const int observationDepth = newDepth;
++            ++lmrObservation.calls;
+             ss->reduction = newDepth - d;
+             value         = -search<NonPV>(pos, ss + 1, -(alpha + 1), -alpha, d, true);
+             ss->reduction = 0;
+@@ -1391,6 +1406,9 @@ moves_loop:  // When in check, search starts here
+             // (*Scaler) Shallower searches here don't scale well
+             if (value > alpha)
+             {
++                ++lmrObservation.highs;
++                const Value observationReduced = value;
++                const u64 observationMiddle = nodes;
+                 // Adjust full-depth search based on LMR results - if the result was
+                 // good enough search deeper, if it was bad enough search shallower.
+                 const bool doDeeperSearch    = d < newDepth && value > bestValue + 53;
+@@ -1399,7 +1417,19 @@ moves_loop:  // When in check, search starts here
+                 newDepth += doDeeperSearch - doShallowerSearch;
+ 
+                 if (newDepth > d)
++                {
+                     value = -search<NonPV>(pos, ss + 1, -(alpha + 1), -alpha, newDepth, !cutNode);
++                    ++lmrObservation.verified;
++                    std::fprintf(stderr,
++                      "LMR,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%llu,%llu,%d,%d,%d\n",
++                      depth, d, observationDepth, newDepth, moveCount, observationStat,
++                      int(PvNode), int(cutNode), int(capture), int(givesCheck), int(ss->ttPv),
++                      int(alpha), int(beta), int(bestValue), int(eval),
++                      int(observationReduced), int(value),
++                      (unsigned long long)(observationMiddle-observationStart),
++                      (unsigned long long)(u64(nodes)-observationMiddle),
++                      observationPawn, int(ss->inCheck), int(bool(excludedMove)));
++                }
+ 
+                 // Post LMR continuation history updates
+                 update_continuation_histories(ss, movedPiece, move.to_sq(), 1334);
