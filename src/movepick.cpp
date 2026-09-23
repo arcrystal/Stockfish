@@ -22,6 +22,7 @@
 #include <limits>
 #include <utility>
 
+#include "attacks.h"
 #include "bitboard.h"
 #include "misc.h"
 #include "position.h"
@@ -199,8 +200,10 @@ ExtMove* MovePicker::score(const MoveList<Type>& ml) {
     Color us = pos.side_to_move();
 
     [[maybe_unused]] Bitboard threatByLesser[KING + 1];
+    [[maybe_unused]] Bitboard discoveredCheckCandidates;
     if constexpr (Type == QUIETS)
     {
+        discoveredCheckCandidates = pos.blockers_for_king(~us);
         threatByLesser[PAWN]   = 0;
         threatByLesser[KNIGHT] = threatByLesser[BISHOP] = pos.attacks_by<PAWN>(~us);
         threatByLesser[ROOK] =
@@ -238,8 +241,11 @@ ExtMove* MovePicker::score(const MoveList<Type>& ml) {
             value += (*continuationHistory[3])[pc][to];
             value += (*continuationHistory[5])[pc][to];
 
-            // bonus for checks
-            value += ((pos.check_squares(pt) & to) && pos.see_ge(m, -75)) * 16384;
+            // bonus for direct and ordinary discovered checks
+            const bool checkingMove = (pos.check_squares(pt) & to)
+                                   || (m.type_of() == NORMAL && (discoveredCheckCandidates & from)
+                                       && !(Attacks::line_bb(from, to) & pos.pieces(~us, KING)));
+            value += (checkingMove && pos.see_ge(m, -75)) * 16384;
 
             // penalty for moving to a square threatened by a lesser piece
             // or bonus for escaping an attack by a lesser piece.
